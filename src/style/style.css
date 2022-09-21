@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+:root {
+  font-size: 62.5%;
+  --background: #060608;
+  --color: #FAFAFA;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Anton", sans-serif;
+  position: relative;
+}
+/* background style*/
+/*---------------------------------------------------------------------------------------------*/
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.bg .sky {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.bg .sky .star1 {
+  top: 150px;
+  left: 50px;
+  animation-delay: 100ms;
+}
+.bg .sky .star2 {
+  top: 0;
+  right: 150px;
+  animation-delay: 150ms;
+}
+.bg .sky .star3 {
+  bottom: 500px;
+  right: 50px;
+  animation-delay: 200ms;
+}
+.bg .sky .star4 {
+  top: 50%;
+  left: 50%;
+  
+          animation-delay: 250ms;
+}
+.bg .sky .star5 {
+  top: 50%;
+  right: 50%;
+ 
+          animation-delay: 300ms;
+}
+.bg .sky .star6 {
+  top: 70%;
+  right: 50%;
+ 
+          animation-delay: 350ms;
+}
+.bg .sky .star7 {
+  top: 0;
+  left: 10%;
+ 
+          animation-delay: 400ms;
+}
+.bg .sky .star8 {
+  top: 25%;
+  left: 25%;
+ 
+          animation-delay: 450ms;
+}
+.bg .sky .star9 {
+  top: 0;
+  right: 0;
+ 
+          animation-delay: 500ms;
+}
+.bg .sky .star10 {
+  top: 2%;
+  left: 30%;
+ 
+          animation-delay: 550ms;
+}
+.bg .shooting_star {
+  width: 250px;
+  height: 2px;
+  background-image: linear-gradient(to right, #fff, transparent);
+  margin: 50px;
+  margin-bottom: 200xp;
+  position: absolute;
+  transform: rotate(-45deg);
+  -webkit-animation: shooting 3s linear infinite;
+          animation: shooting 3s linear infinite;
+}
+.bg .shooting_star::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  bottom: -1px;
+  left: -1px;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 7px 6px #fff;
+  border-radius: 50%;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(2500px, -400px) rotate(-45deg);
+  }
+  100% {
+    transform: translate(-400px, 400px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*Main container*/
+.mainContainer{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 12rem repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+/*---------------------------------------------------------------------------------------------*/
+/*   header Style */
+header{
+  grid-area:1/1/7/2 ;
+  position: relative;
+  height: 100%;
+}
+
+header span , header a{
+  color:white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+header span{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #fd1702 0%,
+    #9145e3 29%,
+    #ffffff 67%,
+    #2a2901 100%  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: header-anim 2s linear infinite;
+}
+@keyframes header-anim {
+  to {
+    background-position: 200% center;
+  }
+}
+nav {
+  padding-top: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+nav div{
+  margin-bottom: 6rem;
+}
+nav div:nth-child(1){
+  transform: rotate(45deg) translate(20px);
+}
+nav div:nth-child(2){
+  transform: rotate(-45deg) translate(20px);
+}
+nav div:nth-child(3){
+  transform: rotate(45deg) translate(-4px);
+}
+nav div:nth-child(4){
+  transform: rotate(-45deg) translate(20px);
+}
+nav div:nth-child(5){
+  transform: rotate(45deg) translate(20px);
+}
+/*---------------------------------------------------------------------------------------------*/
+/*Kight rider bar*/
+#kitt {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+
+}
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+  width: 3px;
+  height: 80px;
+  background: red;
+  margin: 0;
+  display: inline-block;
+  box-shadow: 0 0 30px red, inset 0 0 5px rgba(255,255,255, 0.5);
+  border-radius: 5px;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.one {
+   animation-name: first ;
+}
+.two {
+  animation-name: second ;
+}
+.three {
+  animation-name: third ;
+}
+.four {
+  animation-name: fourth ;
+}
+.five {
+  animation-name: fifth ;
+}
+.six {
+  animation-name: sixth ;
+}
+.seven {
+  animation-name: seventh ;
+}
+.eight {
+  animation-name: eighth ;
+}
+.nine {
+  animation-name: ninth ;
+}
+.ten {
+  animation-name: tenth ;
+}
+@keyframes first {
+  0%   {opacity:0.2;}
+  10%  {opacity:1;}
+  20%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes second {
+  0%   {opacity:0;}
+  10%   {opacity:0.2;}
+  20%  {opacity:1;}
+  30%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes third {
+  0%   {opacity:0;}
+  20%  {opacity:0.2;}
+  30%  {opacity:1;}
+  40%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes fourth {
+  0%   {opacity:0;}
+  30%  {opacity:0.2;}
+  40%  {opacity:1;}
+  50%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes fifth {
+  0%   {opacity:0;}
+  40%  {opacity:0.2;}
+  50%  {opacity:1;}
+  60%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes sixth {
+  0%   {opacity:0;}
+  50%  {opacity:0.2;}
+  60%  {opacity:1;}
+  70%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes seventh {
+  0%   {opacity:0;}
+  60%  {opacity:0.2;}
+  70%  {opacity:1;}
+  80%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes eighth {
+  0%   {opacity:0;}
+  70%  {opacity:0.2;}
+  80%  {opacity:1;}
+  90%  {opacity:0.2;}
+  100% {opacity:0;}
+}
+@keyframes ninth {
+  0%   {opacity:0;}
+  80%  {opacity:0.2;}
+  90%  {opacity:1;}
+  100% {opacity:0.2;}
+}
+@keyframes tenth {
+  0%   {opacity:0;}
+  90%  {opacity:0.2;}
+  100%  {opacity:1;}
+}
+/*---------------------------------------------------------------------------------------------*/
+h1{
+  color: #484848;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  position: absolute;
+  left: 30%;
+  top: 10px;
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "'";
+}
+h1:hover span:nth-child(2){
+  margin-left: 5px
+}
+h1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
+/*---------------------------------------------------------------------------------------------*/
+.bigContainer {
+  grid-area:2/2/4/4 ;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns:10rem repeat(5 ,250px);
+  grid-template-rows: repeat(6 ,1fr);
+  
+}
+
+
+.container {
+  color: var(--color);
+  font-size: 1.5rem;
+  grid-column:2 / 4 ;
+  grid-row: 1 / 4;
+  font-size: 4rem;
+}
+
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.right {
+  text-align: right;
+  width: 100%;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+
+
+.stack span {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 20rem;
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.stack span:nth-child(odd) { --glitch-translate: 8px; }
+.stack span:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  };
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+/*-------------------------buuton styling-------------------------------------------*/
+.visit{
+  grid-area:5/3/6/4 ;
+}
+.visit a {
+  text-decoration: none;
+}
+button{
+  width: 25rem;
+  height: 10rem;
+  font-size: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:  5px 5px 12px #7d7d7d,
+               -5px -5px 12px #ffffff;
+text-align: center;
+}
+a:hover{
+  cursor: pointer;
+}
+a:hover button{
+  border-radius: 16px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  10px 10px 36px #a1a1a1,
+             -10px -10px 36px #ffffff;
+}
+a:hover button i{
+  color: hotpink;
+}
+button i{
+  color: black;
+  font-size: 3rem;
+}
+
+
+/*-------------------------media stuff-----------------------------*/
+
+/*-------------------------Mobile view-----------------------------*/
+@media screen and (max-width:400px) {
+  header  {
+    grid-area: 1/1/2/-1;
+    width: 100%;
+    height: 8rem;
+    
+  }
+  header span,header a{
+    font-size: 2rem;
+  }
+  #kitt{
+   display: none;
+     
+  }
+
+  nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+ 
+  nav div:nth-child(1){
+    transform: rotate(0deg) translate(0);
+  }
+  nav div:nth-child(2){
+    transform: rotate(0deg) translate(0);
+  }
+  nav div:nth-child(3){
+    transform: rotate(0deg) translate(0);
+  }
+  nav div:nth-child(4){
+    transform: rotate(0deg) translate(0);
+  }
+  nav div:nth-child(5){
+    transform: rotate(0deg) translate(0);
+    display: none;
+  }
+  h1{
+    top: 10%;
+    left: 0;
+    padding: 2rem;
+  }
+  .bigContainer{
+    grid-area:3/1/5/2;
+    padding: 2rem;
+  }
+  .container{
+    grid-area: 2/1/4/3;
+  }
+  .stack span {
+    font-size: 10rem;
+  }
+  .visit{
+    grid-area: 6/1/7/2;
+  }
+  button{
+    width: 20rem;
+    height: 7rem;
+    margin-left: 2rem;
+  }
+}
+
+/*-------------------------tablet view-----------------------------*/
+@media screen and (min-width:401px) and (max-width:702px){
+  .bigContainer{
+    grid-area:2/2/4/3;
+    padding: 0;
+  }
+  .container{
+    grid-area: 2/1/4/3;
+    padding: 0;
+  }
+  .visit{
+    grid-area: 6/2/7/3;
+  }
+}
