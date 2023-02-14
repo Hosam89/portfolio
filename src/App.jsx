@@ -9,7 +9,7 @@ function App() {
   const size = useWindowSize();
 
   return (
-    <div className="App">
+    <div className="App mt-3">
       {/** Phone view */}
       {size.width <= 450 && (
         <BrowserRouter>

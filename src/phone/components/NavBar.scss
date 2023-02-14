@@ -1,4 +1,19 @@
-.btn{
-    font-family: fontawesome, sans-serif;
-    
+.navbar-item{
+    width: calc(100% / 3);
+    margin-inline: auto;
+    button{
+        width: 130px;
+    }
+}
+
+
+@media screen  and (max-width:389px){
+    .navbar-item{
+        button{
+            width: 100px;
+            p{
+                display: none;
+            }
+        }
+    }
 }
