@@ -1,16 +1,21 @@
 .navbar-item{
     width: calc(100% / 3);
     margin-inline: auto;
+    
     button{
-        width: 130px;
+        width: 90px;
+        height: 75px;
+        border-radius: 10px;
+       
     }
+  
 }
 
 
 @media screen  and (max-width:389px){
     .navbar-item{
         button{
-            width: 100px;
+            width: 80px;
             p{
                 display: none;
             }

@@ -1,0 +1,21 @@
+
+.title{
+    h1{
+        border-bottom: 2px solid;
+        margin-inline: auto;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 70%;
+    }
+}
+
+.para{
+
+    p{
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+}

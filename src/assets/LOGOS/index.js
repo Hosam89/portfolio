@@ -9,7 +9,9 @@ import NodeJsLogo from "./node-2.png";
 import ReactLogo from "./react.png";
 import SassLogo from "./sass-1.png";
 import TailwindLogo from "./tw.png";
-
+import TypeScriptLogo from "./typescript.svg";
+import CPlusPlusLogo from "./cplusplus.jpg";
+import Matlab_Logo from "./Matlab_Logo.png";
 export {
   BootstraoLogo,
   CSSLogo,
@@ -22,4 +24,7 @@ export {
   ReactLogo,
   SassLogo,
   TailwindLogo,
+  TypeScriptLogo,
+  CPlusPlusLogo,
+  Matlab_Logo,
 };

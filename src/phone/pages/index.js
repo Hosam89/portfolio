@@ -3,4 +3,5 @@
 import Home from "./home/Home";
 import Projects from "./Projects/Projects";
 import AboutMe from "./aboutme/AboutMe";
-export { Home, Projects, AboutMe };
+import Contact from "./Contact/Contact";
+export { Home, Projects, AboutMe, Contact };
