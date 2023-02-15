@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiFillHome, AiOutlineHome } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiOutlineHome,
+  AiFillContacts,
+  AiOutlineContacts,
+} from "react-icons/ai";
 import { BsPerson, BsFillPersonFill } from "react-icons/bs";
 import "./NavBar.scss";
 
@@ -92,7 +97,7 @@ const NavBar = () => {
         </NavLink>
       </div>
       <div className="navbar-item d-flex justify-content-center align-items-center">
-        <NavLink to="/projects">
+        <NavLink to="/contact">
           <button
             className={`btn ${
               !clicked && !aboutmeClicked && !projectClicked && contactClicked
@@ -101,7 +106,7 @@ const NavBar = () => {
             }`}
             onClick={(e) => contactIsActive(e)}
           >
-            <i className="fa-solid fa-diagram-project"></i>
+            {contactClicked ? <AiFillContacts /> : <AiOutlineContacts />}
             <p className="">Contact</p>
           </button>
         </NavLink>

@@ -3,7 +3,6 @@ import {
   BootstraoLogo,
   CSSLogo,
   FireBaseLogo,
-  GitHubLogo,
   HTMLLogo,
   JSLogo,
   NodeJsLogo,
