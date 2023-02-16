@@ -5,7 +5,6 @@ import { Home, Projects, AboutMe, Contact } from "./phone/pages/index";
 import Footer from "./phone/components/Footer";
 //Style imports
 import "./App.scss";
-import { AiFillContacts } from "react-icons/ai";
 
 function App() {
   const size = useWindowSize();

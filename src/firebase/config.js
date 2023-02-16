@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const projectFireStore = firebase.fireStore();
+const projectFireStore = firebase.firestore();
 
 const timestamp = firebase.firestore.Timestamp;
 
