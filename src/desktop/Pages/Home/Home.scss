@@ -1,0 +1,36 @@
+.scroll{
+    z-index: initial;
+   p{
+    z-index: -1;
+    animation: goUp 3s ease-in 1 forwards;
+   }
+}
+
+
+@keyframes goUp {
+    0%{
+        transform: translateY(500px);
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 0;
+    }
+
+    40%{
+        opacity: 0.5;
+    }
+
+    60%{
+        opacity: 0.7;
+    }
+
+    80%{
+        opacity: 0.9;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

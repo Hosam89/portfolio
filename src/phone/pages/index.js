@@ -4,4 +4,5 @@ import Home from "./home/Home";
 import Projects from "./Projects/Projects";
 import AboutMe from "./aboutme/AboutMe";
 import Contact from "./Contact/Contact";
-export { Home, Projects, AboutMe, Contact };
+import NavBar from "../components/NavBar";
+export { Home, Projects, AboutMe, Contact, NavBar };

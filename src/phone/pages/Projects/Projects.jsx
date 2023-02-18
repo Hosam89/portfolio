@@ -13,7 +13,11 @@ const Projects = () => {
       </div>
       <div className="projects p-3">
         <div className="project mt-5">
-          <a href="https://music-react-lilac.vercel.app" target={"_blank"}>
+          <a
+            href="https://music-react-lilac.vercel.app"
+            rel="noreferrer"
+            target={"_blank"}
+          >
             <button className="btn btn-dark">
               Lyrics Music App with React
             </button>
@@ -23,6 +27,7 @@ const Projects = () => {
           <a
             href="https://project-manger-ten.vercel.app/login"
             target={"_blank"}
+            rel="noreferrer"
           >
             <button className="btn btn-dark">
               Project management App with Rreact and Firebase
@@ -30,12 +35,20 @@ const Projects = () => {
           </a>
         </div>
         <div className="project mt-5">
-          <a href="https://vercel.com/hosam89/recipe" target={"_blank"}>
+          <a
+            href="https://vercel.com/hosam89/recipe"
+            target={"_blank"}
+            rel="noreferrer"
+          >
             <button className="btn btn-dark">Recipe App with Firebase</button>
           </a>
         </div>
         <div className="project mt-5">
-          <a href="https://benny-s-burger.vercel.app" target={"_blank"}>
+          <a
+            href="https://benny-s-burger.vercel.app"
+            target={"_blank"}
+            rel="noreferrer"
+          >
             <button className="btn btn-dark">
               A pure HTML and CSS Project
             </button>
