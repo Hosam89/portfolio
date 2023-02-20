@@ -30,7 +30,7 @@ const Projects = () => {
             rel="noreferrer"
           >
             <button className="btn btn-dark">
-              Project management App with Rreact and Firebase
+              Project management App with React and Firebase
             </button>
           </a>
         </div>
