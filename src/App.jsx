@@ -52,10 +52,10 @@ function App() {
                   <NavDesk />
                 </BrowserRouter>
               )}
+              <button className="turnOn" onClick={() => setOnOFF(!onoFF)}>
+                <AiOutlinePoweroff />
+              </button>
             </div>
-            <button className="turnOn" onClick={() => setOnOFF(!onoFF)}>
-              <AiOutlinePoweroff />
-            </button>
           </div>
         )}
       </div>
