@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import Window from "../../component/Window";
 
+import "./Projects.scss";
+import "animate.css";
 const Projects = () => {
   return (
-    <div>
-      Projects
-      <Link to="/">
-        <button>Go back</button>
-      </Link>
+    <div className="dtProject">
+      <Window />
+      <div className="controlIcons">
+        <button></button>
+      </div>
     </div>
   );
 };

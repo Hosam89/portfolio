@@ -1,0 +1,131 @@
+.contact{
+  
+    outline: 1px solid black;
+    border-radius: 10px 10px 0px 0px;
+    .icons{
+        &::after{
+            content: 'Contact';
+            display: block;
+            padding-left: 10px;
+            width: 10%;
+            height: 24px;
+            background-color: #121212;
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+            z-index: 0;
+          
+        }
+    }
+
+
+    .controlIcons{
+        margin: 5px;
+        padding-inline: 5px;
+        padding-block: 5px;
+        border: 2px solid black;
+        border-radius: 8px;
+
+
+        background-color: rgb(66, 66, 66);
+        .icon{
+         
+            font-size: 1.2rem;
+            cursor: pointer;
+            .left{
+                border-left: 2px solid gray;
+                padding-left: 3px;
+            }
+
+            .right{
+                border-right: 2px solid gray;
+                padding-right: 3px;
+            }
+            
+        }
+
+        .fontSelect{
+            width: 140px
+        }
+    }
+
+    .formContainer{
+            form{
+                margin-inline: auto;
+                text-align: center;
+            }
+        padding: 6px;
+        vertical-align: top;
+        .send{
+            width: 80px;
+            height: 100px;
+            button{
+                height: 75%;
+                width: 80%;
+                font-size: 3rem;
+                &:hover{
+                    background-color: green;
+                    color: blak;
+                }
+            }
+        }  
+
+        .formInput{
+            width: 80%;
+            padding-top: 7px;
+            label{
+                display: inline-block;
+                width: 100%;
+                margin-inline: 10px;
+                margin-bottom: 6px;
+                
+            }
+
+            input{
+                  width: 90%;
+                  margin-inline: 5px;
+                  border-radius: 8px;
+                  outline: none;
+                  border: none;
+                  height: 33px;
+
+
+                  padding: 6px;
+                  &:focus{
+                    border: 2px solid green;
+                  }
+            }
+            span{
+                text-align: center;
+
+
+                background-color: lightgray;
+                padding-inline: 15px;
+                padding-block: 5px;
+                
+                color: black;
+
+                border-radius: 5px;
+            }
+           
+           
+        }
+        
+    }
+    .textarea{
+        width: 100%;
+        label{
+            width: 100%;
+        }
+    }
+     textarea{
+        resize: none;
+        width: 85%;
+        height: 300px;
+        padding: 10px;
+     }
+}
+
+
+   
+

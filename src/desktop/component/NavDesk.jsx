@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   FolderIcon,
@@ -11,12 +11,15 @@ import {
 import "./NavDesk.scss";
 
 const NavDesk = () => {
-  const [showName, setShowName] = useState(true);
+  const [showName, setShowName] = useState(0);
+  useEffect(() => {
+    setShowName(0);
+  }, []);
   const showSpanOnOver = (event) => {
     event.target.previousElementSibling.style.opacity = 1;
   };
   const hidddSpanOnOver = (event) => {
-    event.target.previousElementSibling.style.opacity = 0;
+    event.target.previousElementSibling.style.opacity = showName;
   };
   return (
     <div className="nav">

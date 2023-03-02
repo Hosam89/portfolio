@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-
+import Window from "../../component/Window";
+import "./About.scss";
+import "animate.css";
 const About = () => {
   return (
-    <div>
-      About
-      <Link to="/">
-        <button>Go back</button>
-      </Link>
+    <div className="about">
+      <Window />
     </div>
   );
 };

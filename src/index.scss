@@ -4,3 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+.icons{
+    height: 30px;
+    background-color: black;
+    padding: 5px;
+    position: relative;
+    border-radius: 8px 8px 0px 0px;
+    &::after{
+        border-radius: 8px 8px 0px 0px;
+    }
+    svg{
+        color: white;
+        float: right;
+        cursor: pointer;
+        margin-inline: 6px;
+        margin-block: 3px;
+
+        
+    }
+}
