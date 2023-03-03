@@ -1,5 +1,7 @@
 import Window from "../../component/Window";
 import Select from "react-select";
+import emailjs, { send } from "@emailjs/browser";
+import { useRef } from "react";
 //icons
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { RxClipboardCopy } from "react-icons/rx";
@@ -7,6 +9,7 @@ import { BiBrushAlt } from "react-icons/bi";
 import { FiSend } from "react-icons/fi";
 import "./Contact.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -17,8 +20,9 @@ const Contact = () => {
     label: "Times New Roman",
   });
   const [fontSize, setFontSize] = useState({ label: 11, value: 11 });
+  const form = useRef();
+  const [confirmation, setConfirmation] = useState("");
 
-  console.log(typeof fontSize);
   const fontArray = [
     { value: "'Courier New', Courier, monospace", label: "Courier New" },
     { value: "Times New Roman', Times, serif", label: "Times New Roman" },
@@ -32,7 +36,31 @@ const Contact = () => {
     { value: 16, label: 16 },
     { value: 18, label: 18 },
   ];
-
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_2iut1di",
+        "Contact_Form",
+        form.current,
+        "QiAyXmev4qiFRGgRj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setConfirmation(" your Message was sent, Thank you!");
+        },
+        (error) => {
+          console.log(error.text);
+          setConfirmation(
+            " something went wrong with the Messaging Service, please send me an email instead"
+          );
+        }
+      );
+    setEmail("");
+    setSubject("");
+    setText("");
+  };
   const copyToClipBoared = () => {
     const copyedtext = ` from :${email} \n to :hosamothman1@gmail.com \n Subject : ${subject} \n content : ${text}`;
     const newElemnt = document.createElement("textarea");
@@ -47,7 +75,10 @@ const Contact = () => {
       <Window />
       <div className="controlIcons d-flex gap-3 justify-content-between mt-3">
         <div className="icon">
-          <HiArrowUturnLeft />
+          <Link to="/">
+            {" "}
+            <HiArrowUturnLeft />
+          </Link>
         </div>
 
         <div className="icon d-flex gap-5">
@@ -89,7 +120,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="formContainer">
-        <form>
+        <form id="myForm" ref={form} onSubmit={(e) => sendEmail(e)}>
           <div className="d-flex">
             <div className="d-flex justify-content-center align-items-center send">
               <button type="submit">
@@ -100,6 +131,7 @@ const Contact = () => {
               <label>
                 <span>from</span>
                 <input
+                  name="name"
                   type="email"
                   placeholder="Your Email"
                   required
@@ -120,32 +152,38 @@ const Contact = () => {
               <label>
                 Subject
                 <input
-                  type="email"
+                  name="subject"
+                  type="text"
                   onChange={(e) => {
                     setSubject(e.target.value);
                   }}
                   value={subject}
                 />
               </label>
+              <div className="textarea">
+                <label>
+                  <textarea
+                    name="message"
+                    cols="150"
+                    rows="10"
+                    placeholder="What do you want to tell me"
+                    style={{
+                      fontFamily: `${font.value}`,
+                      fontSize: `${fontSize.value}px`,
+                    }}
+                    onChange={(e) => {
+                      setText(e.target.value);
+                    }}
+                    value={text}
+                  />
+                </label>
+              </div>
+              {confirmation && (
+                <h4 className="" placeholder="message confirmation">
+                  message confirmation status: {confirmation}
+                </h4>
+              )}
             </div>
-          </div>
-
-          <div className="textarea">
-            <label>
-              <textarea
-                cols="150"
-                rows="10"
-                placeholder="What do you want to tell me"
-                style={{
-                  fontFamily: `${font.value}`,
-                  fontSize: `${fontSize.value}px`,
-                }}
-                onChange={(e) => {
-                  setText(e.target.value);
-                }}
-                value={text}
-              />
-            </label>
           </div>
         </form>
       </div>

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form, FloatingLabel } from "react-bootstrap";
+import emailjs, { send } from "@emailjs/browser";
+import { Form, Button, FloatingLabel } from "react-bootstrap";
 import { projectFireStore, timestamp } from "../../../firebase/config";
 import "./Contact.scss";
 
@@ -9,32 +10,38 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-
-  /** A Function to submit the Data to the db */
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const body = {
-      contactEmail: email,
-      contactName: fullName,
-      contactMessage: message,
-      sendAt: timestamp.fromDate(new Date()),
-    };
-
-    try {
-      await projectFireStore.collection("contact").add(body);
-      setFullName("");
-      setEmail("");
-      setMessage("");
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
-    } catch (error) {
-      console.log(error, error.message);
-    }
+  const [confirmation, setConfirmation] = useState("");
+  const form = useRef();
+  /** A Function to submit the Data to the eamil */
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_2iut1di",
+        "Contact_Form",
+        form.current,
+        "QiAyXmev4qiFRGgRj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setConfirmation(" your Message was sent, Thank you!");
+        },
+        (error) => {
+          console.log(error.text);
+          setConfirmation(
+            " something went wrong with the Messaging Service, please send me an email instead"
+          );
+        }
+      );
+    setFullName("");
+    setEmail("");
+    setMessage("");
   };
+
   return (
     <div className="px-5 d-flex justify-content-center align-items-center mt-5">
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <Form onSubmit={(e) => sendEmail(e)} ref={form}>
         <Form.Group className="mb-3" controlId="formBasicText">
           <Form.Label>Name:</Form.Label>
           <Form.Control
@@ -53,6 +60,7 @@ const Contact = () => {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             required
+            name="name"
           />
           <Form.Text className="text-muted">
             i'll never share your email with anyone else.
@@ -65,6 +73,7 @@ const Contact = () => {
           className="my-3"
         >
           <Form.Control
+            name="message"
             as="textarea"
             placeholder="Leave a comment here"
             onChange={(e) => setMessage(e.target.value)}
