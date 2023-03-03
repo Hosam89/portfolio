@@ -1,6 +1,6 @@
 import Window from "../../component/Window";
 import Select from "react-select";
-import emailjs, { send } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 //icons
 import { HiArrowUturnLeft } from "react-icons/hi2";
@@ -128,38 +128,44 @@ const Contact = () => {
               </button>
             </div>
             <div className="formInput">
-              <label>
-                <span>from</span>
-                <input
-                  name="name"
-                  type="email"
-                  placeholder="Your Email"
-                  required
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                  value={email}
-                />
-              </label>
-              <label>
-                <span>&nbsp;&nbsp;CC&nbsp;&nbsp;</span>
-                <input
-                  type="email"
-                  placeholder="hosamothman1@gmail.com"
-                  disabled
-                />
-              </label>
-              <label>
-                Subject
-                <input
-                  name="subject"
-                  type="text"
-                  onChange={(e) => {
-                    setSubject(e.target.value);
-                  }}
-                  value={subject}
-                />
-              </label>
+              <div>
+                <label>
+                  <span>from</span>
+                  <input
+                    name="name"
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                    value={email}
+                  />
+                </label>
+              </div>
+              <div>
+                <label>
+                  <span>&nbsp;&nbsp;CC&nbsp;&nbsp;</span>
+                  <input
+                    type="email"
+                    placeholder="hosamothman1@gmail.com"
+                    disabled
+                  />
+                </label>
+              </div>
+              <div className="d-flex">
+                <label className="subject">
+                  <span>Subject</span>
+                  <input
+                    name="subject"
+                    type="text"
+                    onChange={(e) => {
+                      setSubject(e.target.value);
+                    }}
+                    value={subject}
+                  />
+                </label>
+              </div>
               <div className="textarea">
                 <label>
                   <textarea

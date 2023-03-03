@@ -80,7 +80,17 @@
                 margin-bottom: 6px;
                 
             }
-
+            .subject{
+                padding-left: 8px;
+                span{
+                    background-color: transparent;
+                }
+                input{
+                    margin: 0;
+                    width: 82%;
+                }
+                
+            }
             input{
                   width: 80%;
                   margin-inline: 5px;

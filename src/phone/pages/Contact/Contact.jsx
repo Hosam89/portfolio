@@ -1,15 +1,15 @@
 import { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import emailjs, { send } from "@emailjs/browser";
+
+import emailjs from "@emailjs/browser";
 import { Form, Button, FloatingLabel } from "react-bootstrap";
-import { projectFireStore, timestamp } from "../../../firebase/config";
+
 import "./Contact.scss";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();
+
   const [confirmation, setConfirmation] = useState("");
   const form = useRef();
   /** A Function to submit the Data to the eamil */
