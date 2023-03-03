@@ -85,6 +85,11 @@ const Contact = () => {
         <Button variant="primary" type="submit">
           Submit
         </Button>
+        {confirmation && (
+          <h4 className="" placeholder="message confirmation">
+            message confirmation status: {confirmation}
+          </h4>
+        )}
       </Form>
     </div>
   );
