@@ -1,12 +1,28 @@
 .about{
      outline: 1px solid black;
-     height: 300px;
+   
      border-radius: 10px;
      border-radius: 10px 10px 0px 0px;
+    .welcome{
+        overflow: hidden;
+        .welcomImage{
+            img{
+                border-radius: 50%;
+                border-left: 5px solid gray;
+            }
+        }
+        .welcomeText{
+                padding-top: 60px;
+                height: 500px;
+            p{
+               height: fit-content;
+               overflow: scroll;
+               word-spacing: 5px;
+           }
+        }
+    }
     .icons{
-     
         &::after{
-        
             content: 'About';
             display: block;
             padding-left: 10px;

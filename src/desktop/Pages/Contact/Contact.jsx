@@ -48,7 +48,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setConfirmation(" your Message was sent, Thank you!");
+          setConfirmation(" your Message was sent, Thank you! DADDY");
         },
         (error) => {
           console.log(error.text);
