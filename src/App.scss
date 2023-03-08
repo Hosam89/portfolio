@@ -57,7 +57,10 @@ body{
             z-index: 4;
         }
       
-      
+      .content{
+        
+        height: 100%;
+      }
     }
     .screenON{
         background:url(./assets/2109.jpg) no-repeat center center / cover;
