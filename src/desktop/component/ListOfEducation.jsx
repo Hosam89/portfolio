@@ -5,10 +5,10 @@ const ListOfEducation = ({ title, place, date }) => {
   const [showSecond, setShowSecond] = useState(false);
   const [showThird, setShowthird] = useState(false);
   return (
-    <div className="list d-flex">
-      <div className="d-flex justify-content-between align-items-centre flex-column">
+    <div className="list d-flex justify-content-center aling-items-center gap-5 py-5">
+      <div className=" btnContainer d-flex justify-content-between align-items-centre flex-column">
         <button
-          className="listBtn"
+          className="listBtn btn btn-danger"
           onClick={() => {
             setShowFirst(true);
             setShowSecond(false);
@@ -16,7 +16,7 @@ const ListOfEducation = ({ title, place, date }) => {
           }}
         ></button>
         <button
-          className="listBtn"
+          className="listBtn btn btn-danger"
           onClick={() => {
             setShowFirst(false);
             setShowSecond(true);
@@ -24,7 +24,7 @@ const ListOfEducation = ({ title, place, date }) => {
           }}
         ></button>
         <button
-          className="listBtn"
+          className="listBtn btn btn-danger"
           onClick={() => {
             setShowFirst(false);
             setShowSecond(false);

@@ -1,22 +1,30 @@
 .list{
     
     position: relative;
+
+    isolation: isolate;
     .listBtn{
-        width: 40px;
-        aspect-ratio: 1;
+       width: 20px;
+       height: 20px;
         border-radius: 50%;
+        z-index: 3;
     }
 
+    .btnContainer{
+
+        &::after{
     
-    &::after{
-
-        content: '';
-        height: 100%;
-        width: 10px;
-        background-color: gray;
-
-        position:absolute;
-        top: 0;
-        left: 0;
+            content: '';
+            height: 100%;
+            width: 10px;
+            background-color: rgba(128, 128, 128, 0.147);
+            border-radius: 8px;
+            position:absolute;
+            top: 0;
+            left: 256px;
+        }
+    }
+    .listItem{
+        width: 300px;
     }
 }
