@@ -1,4 +1,4 @@
-import Window from "../../component/Window";
+import { Window, ListOfEducation } from "../../component/index";
 import Profile from "../../../assets/dummy_300x300_ffffff_cccccc.png";
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
@@ -88,9 +88,7 @@ const About = () => {
             )}
             {education && (
               <div className="education collectionBox">
-                <p>DCI</p>
-                <p>Essen Duisburg University</p>
-                <p>Al-Baath University</p>
+                <ListOfEducation />
               </div>
             )}
             {work && (
