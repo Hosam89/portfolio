@@ -1,4 +1,4 @@
-import { Window, ListOfEducation } from "../../component/index";
+import { Window, ListOfEducation, ListOfWork } from "../../component/index";
 import Profile from "../../../assets/dummy_300x300_ffffff_cccccc.png";
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
@@ -75,30 +75,30 @@ const About = () => {
                 Work Experience
               </button>
             </div>
-            {skills && (
-              <div className="skills collectionBox">
-                <p>Html</p>
-                <p>CSS and SASS</p>
-                <p>React</p>
-                <p>javaScript</p>
-                <p>TypeScript</p>
-                <p>C++</p>
-                <p>Matlab</p>
-              </div>
-            )}
-            {education && (
-              <div className="education collectionBox">
-                <ListOfEducation />
-              </div>
-            )}
-            {work && (
-              <div className="word collectionBox">
-                <p>DCI Tutor</p>
-                <p>Hengst</p>
-                <p>Alpha Shop</p>
-              </div>
-            )}
-            <div className="timeLine"></div>
+
+            <div className="timeLine">
+              {skills && (
+                <div className="skills collectionBox">
+                  <p>Html</p>
+                  <p>CSS and SASS</p>
+                  <p>React</p>
+                  <p>javaScript</p>
+                  <p>TypeScript</p>
+                  <p>C++</p>
+                  <p>Matlab</p>
+                </div>
+              )}
+              {education && (
+                <div className="education collectionBox">
+                  <ListOfEducation />
+                </div>
+              )}
+              {work && (
+                <div className="word collectionBox">
+                  <ListOfWork />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

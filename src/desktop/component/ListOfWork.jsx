@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ListItem.scss";
-const ListOfEducation = () => {
+
+const ListOfWork = () => {
   const [showFirst, setShowFirst] = useState(true);
   const [showSecond, setShowSecond] = useState(false);
   const [showThird, setShowthird] = useState(false);
@@ -48,7 +49,14 @@ const ListOfEducation = () => {
       <div className="listItems">
         {showFirst && !showSecond && !showThird && !showForth && (
           <div className="listItem">
-            <p className="title">Web developer</p>
+            <p className="title">Work for you</p>
+            <p className="place">At your Company</p>
+            <span className="date">07/23 - till the End</span>
+          </div>
+        )}
+        {!showFirst && showSecond && !showThird && !showForth && (
+          <div className="listItem">
+            <p className="title">Class Tutor</p>
             <p className="place">
               <a
                 href="https://digitalcareerinstitute.org"
@@ -61,33 +69,28 @@ const ListOfEducation = () => {
             <span className="date">07/22 - 07/23</span>
           </div>
         )}
-        {!showFirst && showSecond && !showThird && !showForth && (
+        {!showFirst && !showSecond && showThird && !showForth && (
           <div className="listItem">
-            <p className="title">Mechanical Engineering</p>
+            <p className="title">Machinery and Equipment operator</p>
             <p className="place">
               <a
-                href="https://www.uni-due.org"
+                href="https://www.hengst.com/de/"
                 target={"_blank"}
                 rel="noreferrer"
               >
-                Essen Duisburg Univercity
+                Hengst GmbH
               </a>
             </p>
-            <span className="date">09/18 - 11/22</span>
-          </div>
-        )}
-        {!showFirst && !showSecond && showThird && !showForth && (
-          <div className="listItem">
-            <p className="title">german as a foreign language</p>
-            <p className="place">Germany Münster</p>
-            <span className="date">02/16 - 09/18</span>
+            <span className="date">07/19 - 09/19</span>
           </div>
         )}
         {!showFirst && !showSecond && !showThird && showForth && (
           <div className="listItem">
-            <p className="title">Mechatronic Engineering(Without degree)</p>
+            <p className="title">
+              Specialist in software and hardware for Mobile and laptops
+            </p>
             <p className="place">Homs, Syria</p>
-            <span className="date">09/08 - 07/14</span>
+            <span className="date">1/15 - 02/16</span>
           </div>
         )}
       </div>
@@ -95,4 +98,4 @@ const ListOfEducation = () => {
   );
 };
 
-export default ListOfEducation;
+export default ListOfWork;
