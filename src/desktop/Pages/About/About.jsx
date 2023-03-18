@@ -1,14 +1,22 @@
-import { Window, ListOfEducation, ListOfWork } from "../../component/index";
-import Profile from "../../../assets/dummy_300x300_ffffff_cccccc.png";
+import {
+  Window,
+  ListOfEducation,
+  ListOfWork,
+  Skills,
+} from "../../component/index";
+
 import { HiArrowUturnLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-import "./About.scss";
 import { useState } from "react";
+
+//Style
+import "./About.scss";
 
 const About = () => {
   const [skills, setSkills] = useState(false);
   const [education, setEducation] = useState(false);
   const [work, setWork] = useState(false);
+
   return (
     <div className="about">
       <Window />
@@ -21,7 +29,7 @@ const About = () => {
       <div className="welcome d-flex">
         <div className=" col-lg-6 d-flex justify-content-center align-items-center">
           <div className="welcomeImage">
-            <img src={Profile} alt="" />
+            <div className="Profimg"></div>
           </div>
         </div>
         <div className="welcomeText col-lg-6">
@@ -45,7 +53,7 @@ const About = () => {
             <div className="d-flex justify-content-around align-items-center">
               {" "}
               <button
-                className="btn btn-info mx-2"
+                className="btn btn-info mx-2 fs-3"
                 onClick={() => {
                   setEducation(false);
                   setSkills(true);
@@ -55,7 +63,7 @@ const About = () => {
                 Skills
               </button>
               <button
-                className="btn btn-info mx-2"
+                className="btn btn-info mx-2 fs-3"
                 onClick={() => {
                   setSkills(false);
                   setEducation(true);
@@ -65,7 +73,7 @@ const About = () => {
                 Education
               </button>
               <button
-                className="btn btn-info mx-2"
+                className="btn btn-info mx-2 fs-3"
                 onClick={() => {
                   setEducation(false);
                   setSkills(false);
@@ -78,14 +86,8 @@ const About = () => {
 
             <div className="timeLine">
               {skills && (
-                <div className="skills collectionBox">
-                  <p>Html</p>
-                  <p>CSS and SASS</p>
-                  <p>React</p>
-                  <p>javaScript</p>
-                  <p>TypeScript</p>
-                  <p>C++</p>
-                  <p>Matlab</p>
+                <div className="skills collectionBox w-100 d-flex">
+                  <Skills />
                 </div>
               )}
               {education && (

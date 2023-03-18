@@ -12,6 +12,9 @@ import TailwindLogo from "./tw.png";
 import TypeScriptLogo from "./typescript.svg";
 import CPlusPlusLogo from "./cplusplus.jpg";
 import Matlab_Logo from "./Matlab_Logo.png";
+import Express from "./express.png";
+import MongoLogo from "./mongodb.png";
+import sqlLogo from "./sql.png";
 export {
   BootstraoLogo,
   CSSLogo,
@@ -27,4 +30,7 @@ export {
   TypeScriptLogo,
   CPlusPlusLogo,
   Matlab_Logo,
+  Express,
+  MongoLogo,
+  sqlLogo,
 };
