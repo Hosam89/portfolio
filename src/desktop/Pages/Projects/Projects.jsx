@@ -50,11 +50,11 @@ const Projects = () => {
           />
         </div>
         <div className="d-flex gap-4">
-          {discord && <Project />}
-          {music && <Project />}
-          {project && <Project />}
-          {recipe && <Project />}
-          {benny && <Project />}
+          {discord && <Project CardTitle={"Discord"} />}
+          {music && <Project CardTitle={"Music"} />}
+          {project && <Project CardTitle={"Dasanna"} />}
+          {recipe && <Project CardTitle={"Recipe App"} />}
+          {benny && <Project CardTitle={"Benny's"} />}
         </div>
       </div>
     </div>

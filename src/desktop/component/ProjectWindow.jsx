@@ -1,10 +1,10 @@
 import { AiOutlineClose, AiOutlineMinus } from "react-icons/ai";
 import { BsSquare } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import "animate.css";
-const Window = () => {
+import "./projectWindow.scss";
+const ProjectWindow = ({ title }) => {
   return (
-    <div className="icons projectIcon">
+    <div className="projectIcon" style={{ "--card-title": `"${title}"` }}>
       <Link to="/">
         <AiOutlineClose />
         <BsSquare />
@@ -14,4 +14,4 @@ const Window = () => {
   );
 };
 
-export default Window;
+export default ProjectWindow;
