@@ -14,6 +14,17 @@ const Projects = () => {
       <div className="projects p-3">
         <div className="project mt-5">
           <a
+            href="https://discord-clone-pink-alpha.vercel.app/login"
+            rel="noreferrer"
+            target={"_blank"}
+          >
+            <button className="btn btn-dark">
+              First try to make a communication App
+            </button>
+          </a>
+        </div>
+        <div className="project mt-5">
+          <a
             href="https://music-react-lilac.vercel.app"
             rel="noreferrer"
             target={"_blank"}
@@ -32,6 +43,7 @@ const Projects = () => {
             <button className="btn btn-dark">
               Project management App with React and Firebase
             </button>
+            Project management App with React and Firebase
           </a>
         </div>
         <div className="project mt-5">

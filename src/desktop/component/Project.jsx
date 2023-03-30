@@ -1,18 +1,16 @@
 import ProjectWindow from "./ProjectWindow";
 import { Card, Button } from "react-bootstrap";
-const Project = ({ CardTitle }) => {
+const Project = ({ CardTitle, discription, link }) => {
   return (
     <div className="project">
       <ProjectWindow title={CardTitle} />
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
-          <Card.Title>{CardTitle}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Card.Text>{discription}</Card.Text>
+
+          <Button variant="primary">
+            <a href={link}>Visit App</a>
+          </Button>
         </Card.Body>
       </Card>
     </div>

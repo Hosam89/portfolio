@@ -3,7 +3,7 @@ import ProjectCard from "../../component/ProjectCard";
 import Project from "../../component/Project";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import { data } from "./discription.js";
 import "./Projects.scss";
 import "animate.css";
 
@@ -49,12 +49,42 @@ const Projects = () => {
             setState={setBenny}
           />
         </div>
-        <div className="d-flex gap-4">
-          {discord && <Project CardTitle={"Discord"} />}
-          {music && <Project CardTitle={"Music"} />}
-          {project && <Project CardTitle={"Dasanna"} />}
-          {recipe && <Project CardTitle={"Recipe App"} />}
-          {benny && <Project CardTitle={"Benny's"} />}
+        <div className="d-flex gap-4 flex-wrap">
+          {discord && (
+            <Project
+              CardTitle={"Discord"}
+              discription={data.discord[0]}
+              link={data.discord[1]}
+            />
+          )}
+          {music && (
+            <Project
+              CardTitle={"Music"}
+              discription={data.music[0]}
+              link={data.music[1]}
+            />
+          )}
+          {project && (
+            <Project
+              CardTitle={"Dasanna"}
+              discription={data.project[0]}
+              link={data.project[1]}
+            />
+          )}
+          {recipe && (
+            <Project
+              CardTitle={"Recipe App"}
+              discription={data.recipe[0]}
+              link={data.recipe[1]}
+            />
+          )}
+          {benny && (
+            <Project
+              CardTitle={"Benny's"}
+              discription={data.benny[0]}
+              link={data.benny[1]}
+            />
+          )}
         </div>
       </div>
     </div>
