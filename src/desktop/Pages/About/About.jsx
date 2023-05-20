@@ -3,37 +3,44 @@ import {
   ListOfEducation,
   ListOfWork,
   Skills,
-} from "../../component/index";
+} from '../../component/index'
 
-import { HiArrowUturnLeft } from "react-icons/hi2";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import CV from '../../../assets/HosamOthman.pdf'
+import { HiArrowUturnLeft } from 'react-icons/hi2'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 //Style
-import "./About.scss";
+import './About.scss'
 
 const About = () => {
-  const [skills, setSkills] = useState(false);
-  const [education, setEducation] = useState(false);
-  const [work, setWork] = useState(false);
+  const [skills, setSkills] = useState(false)
+  const [education, setEducation] = useState(false)
+  const [work, setWork] = useState(false)
 
   return (
-    <div className="about">
+    <div className='about'>
       <Window />
-      <div className="controlIcons">
-        <Link to="/">
-          {" "}
+      <div className='controlIcons'>
+        <Link to='/'>
+          {' '}
           <HiArrowUturnLeft />
         </Link>
       </div>
-      <div className="welcome d-flex">
-        <div className=" col-lg-6 d-flex justify-content-center align-items-center">
-          <div className="welcomeImage">
-            <div className="Profimg"></div>
+      <div className='welcome d-flex'>
+        <div className=' col-lg-6 d-flex justify-content-center align-items-center flex-column'>
+          <div className='welcomeImage'>
+            <div className='Profimg'></div>
+          </div>
+          <div>
+            CV Download
+            <a href={CV} download>
+              EN
+            </a>
           </div>
         </div>
-        <div className="welcomeText col-lg-6">
-          <div className="aboutme col-lg-12">
+        <div className='welcomeText col-lg-6'>
+          <div className='aboutme col-lg-12'>
             <h4>About me</h4>
             <p>
               Greetings, I'm a seasoned MERN (MongoDB, Express, React, and
@@ -49,54 +56,54 @@ const About = () => {
               inquiries or questions.
             </p>
           </div>
-          <div className="collection">
-            <div className="d-flex justify-content-around align-items-center">
-              {" "}
+          <div className='collection'>
+            <div className='d-flex justify-content-around align-items-center'>
+              {' '}
               <button
-                className="btn btn-info mx-2 fs-3"
+                className='btn btn-info mx-2 fs-3'
                 onClick={() => {
-                  setEducation(false);
-                  setSkills(true);
-                  setWork(false);
+                  setEducation(false)
+                  setSkills(true)
+                  setWork(false)
                 }}
               >
                 Skills
               </button>
               <button
-                className="btn btn-info mx-2 fs-3"
+                className='btn btn-info mx-2 fs-3'
                 onClick={() => {
-                  setSkills(false);
-                  setEducation(true);
-                  setWork(false);
+                  setSkills(false)
+                  setEducation(true)
+                  setWork(false)
                 }}
               >
                 Education
               </button>
               <button
-                className="btn btn-info mx-2 fs-3"
+                className='btn btn-info mx-2 fs-3'
                 onClick={() => {
-                  setEducation(false);
-                  setSkills(false);
-                  setWork(true);
+                  setEducation(false)
+                  setSkills(false)
+                  setWork(true)
                 }}
               >
                 Work Experience
               </button>
             </div>
 
-            <div className="timeLine">
+            <div className='timeLine'>
               {skills && (
-                <div className="skills collectionBox w-100 d-flex">
+                <div className='skills collectionBox w-100 d-flex'>
                   <Skills />
                 </div>
               )}
               {education && (
-                <div className="education collectionBox">
+                <div className='education collectionBox'>
                   <ListOfEducation />
                 </div>
               )}
               {work && (
-                <div className="word collectionBox">
+                <div className='word collectionBox'>
                   <ListOfWork />
                 </div>
               )}
@@ -105,7 +112,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
