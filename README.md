@@ -53,11 +53,33 @@ A modern, animated portfolio website with bilingual support (English/German) and
 3. **Language Toggle**: Click the language switcher (🇬🇧 EN / 🇩🇪 DE) in the top-right corner to switch languages
 4. Your preferences (theme and language) are saved automatically in localStorage
 
-## Files
+## Files & Structure
 
-- `index.html` - Main HTML structure with bilingual data attributes
-- `style.css` - All styles, animations, and theme variables
-- `script.js` - Theme toggle, language switching logic, and interactive animations
+```
+portfolio/
+├── index.html           # Main HTML structure with bilingual data attributes
+├── style.css            # All styles, animations, and theme variables
+├── js/                  # JavaScript modules (ES6)
+│   ├── main.js          # Application entry point
+│   ├── theme-toggle.js  # Dark/light theme functionality
+│   ├── language-switcher.js # English/German translations
+│   ├── animations.js    # All visual effects and animations
+│   ├── utils.js         # Reusable utility functions
+│   └── README.md        # Detailed module documentation
+└── README.md            # This file
+```
+
+### JavaScript Architecture
+
+The JavaScript code follows **ES6 module standards** with clear **separation of concerns**:
+
+- **Modular Design**: Each feature is in its own file
+- **Single Responsibility**: Each module has one clear purpose
+- **Reusable Utilities**: Common functions in utils.js
+- **Easy Maintenance**: Update features independently
+- **Better Testing**: Isolated functions are easier to test
+
+See `js/README.md` for detailed module documentation.
 
 ## Browser Support
 
