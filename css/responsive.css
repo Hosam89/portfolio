@@ -1,0 +1,106 @@
+/**
+ * Responsive Design & Utilities
+ * Media queries, scrollbar, selection, and utility styles
+ */
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: -1;
+  }
+
+  .name {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 36px 0;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .theme-icon {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .lang-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .lang-btn .flag {
+    font-size: 1rem;
+  }
+
+  .lang-text {
+    display: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+::-moz-selection {
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+}

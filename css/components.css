@@ -1,0 +1,125 @@
+/**
+ * UI Components
+ * Styles for interactive UI elements (theme toggle, language switcher)
+ */
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-header);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  animation: slideInLeft 0.6s ease-out;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 12px 40px rgba(94, 231, 223, 0.4);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  transition: all 0.4s ease;
+}
+
+.sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moon-icon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+body.dark-theme .sun-icon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0);
+}
+
+body.dark-theme .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+  background: var(--bg-header);
+  backdrop-filter: blur(10px);
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: var(--shadow-md);
+  animation: slideInRight 0.6s ease-out;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 2px solid transparent;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.lang-btn .flag {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.lang-btn:hover .flag {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, #5ee7df, #4fc3e4);
+  color: #0d3b8a;
+  border-color: #5ee7df;
+  box-shadow: 0 4px 15px rgba(94, 231, 223, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.lang-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: rippleAnimation 0.6s ease-out;
+  pointer-events: none;
+}

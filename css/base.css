@@ -1,0 +1,41 @@
+/**
+ * CSS Reset & Base Styles
+ * Provides consistent styling foundation across browsers
+ */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family:
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  background-attachment: fixed;
+  min-height: 100vh;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

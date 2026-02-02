@@ -1,0 +1,61 @@
+/**
+ * CSS Variables & Theme Configuration
+ * Defines color schemes and design tokens for light and dark themes
+ */
+
+/* CSS Variables for Theming */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #f7f9fc;
+  --bg-secondary: #ffffff;
+  --bg-header: linear-gradient(135deg, #0d3b8a, #0b2d68);
+  --bg-card: #ffffff;
+  --bg-card-hover: rgba(255, 255, 255, 0.12);
+
+  --text-primary: #1f2a44;
+  --text-secondary: #f6f8fb;
+  --text-muted: #6b7280;
+
+  --color-accent: #5ee7df;
+  --color-accent-alt: #4fc3e4;
+  --color-primary: #0d3b8a;
+  --color-primary-dark: #0b2d68;
+
+  --border-color: #e6ecf5;
+  --shadow-sm: 0 10px 30px rgba(17, 24, 39, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+  --scrollbar-bg: #e5e7eb;
+  --scrollbar-thumb: #9ca3af;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --bg-primary: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --bg-secondary: rgba(26, 26, 46, 0.9);
+  --bg-header: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  --bg-card: rgba(26, 26, 46, 0.9);
+  --bg-card-hover: rgba(94, 231, 223, 0.1);
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #ffffff;
+  --text-muted: #b8b8d1;
+
+  --color-accent: #5ee7df;
+  --color-accent-alt: #ff6b6b;
+  --color-primary: #5ee7df;
+  --color-primary-dark: #1a1a2e;
+
+  --border-color: rgba(94, 231, 223, 0.2);
+  --shadow-sm: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 40px rgba(94, 231, 223, 0.2);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  --scrollbar-bg: #0f0c29;
+  --scrollbar-thumb: linear-gradient(135deg, #5ee7df, #ff6b6b);
+}

@@ -1,0 +1,227 @@
+/**
+ * Animations & Keyframes
+ * All animation definitions and keyframe rules
+ */
+
+/* Entrance Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Interactive Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 15px rgba(94, 231, 223, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(94, 231, 223, 0.6);
+  }
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Visual Effects */
+@keyframes headerGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    color: var(--color-primary);
+  }
+  50% {
+    color: var(--color-accent);
+  }
+}
+
+/* Avatar Animations */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+/* Particle Animations */
+.particle {
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(94, 231, 223, 0.8),
+    rgba(94, 231, 223, 0)
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(var(--tx, 50px)), calc(var(--ty, -100px)))
+      scale(0);
+    opacity: 0;
+  }
+}
+
+.particle:nth-child(odd) {
+  --tx: -50px;
+  --ty: -120px;
+}
+
+.particle:nth-child(even) {
+  --tx: 70px;
+  --ty: -90px;
+}
+
+/* Scroll Reveal Animation */
+.reveal-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal-element.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Translation Animation */
+[data-en],
+[data-de] {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}

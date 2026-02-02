@@ -1,0 +1,173 @@
+/**
+ * Header Section
+ * Styles for the header including avatar, name, contact info
+ */
+
+/* Header Styles */
+.header {
+  background: var(--bg-header);
+  color: var(--text-secondary);
+  padding: 48px 0;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(94, 231, 223, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(79, 195, 228, 0.1) 0%,
+      transparent 50%
+    );
+  animation: headerGlow 8s ease-in-out infinite;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease-out;
+}
+
+.header-text {
+  margin-bottom: 4px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(
+    135deg,
+    var(--text-secondary),
+    var(--color-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+  position: relative;
+  display: inline-block;
+}
+
+.title {
+  font-size: 1.4rem;
+  animation: fadeIn 1.5s ease-out;
+  font-weight: 600;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  animation: slideUp 1.2s ease-out 0.3s backwards;
+}
+
+.contact-info a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-info a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--bg-card-hover),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.contact-info a:hover::before {
+  left: 100%;
+}
+
+.contact-info a:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(94, 231, 223, 0.3);
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+/* Avatar */
+.avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  animation:
+    bounceIn 1s ease-out,
+    float 3s ease-in-out infinite 1s;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.avatar-wrapper:hover .avatar {
+  transform: scale(1.1);
+}
+
+.avatar-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.24),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255, 255, 255, 0.12),
+      transparent 55%
+    );
+  animation: pulseGlow 3s ease-in-out infinite;
+  pointer-events: none;
+}

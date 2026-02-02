@@ -1,0 +1,34 @@
+/**
+ * Main Stylesheet
+ * Imports all CSS modules in the correct order
+ * 
+ * Module Structure:
+ * 1. Variables - CSS custom properties and theme definitions
+ * 2. Base - Reset and foundational styles
+ * 3. Components - Reusable UI components
+ * 4. Header - Header section styles
+ * 5. Layout - Main content and sections
+ * 6. Animations - Keyframes and animation definitions
+ * 7. Responsive - Media queries and utilities
+ */
+
+/* CSS Variables & Themes */
+@import url("variables.css");
+
+/* Base Styles */
+@import url("base.css");
+
+/* Components */
+@import url("components.css");
+
+/* Header Section */
+@import url("header.css");
+
+/* Layout & Content */
+@import url("layout.css");
+
+/* Animations */
+@import url("animations.css");
+
+/* Responsive & Utilities */
+@import url("responsive.css");
