@@ -17,8 +17,8 @@ export function initThemeToggle() {
 
   const body = document.body;
 
-  // Get saved theme or default to light
-  const currentTheme = getStorageItem("theme", "light");
+  // Get saved theme or default to dark
+  const currentTheme = getStorageItem("theme", "dark");
 
   // Apply saved theme on page load
   applyTheme(currentTheme);
