@@ -70,21 +70,41 @@
 }
 
 @media (max-width: 600px) {
+  #home {
+    padding: 80px 16px 100px;
+  }
+
   .header {
-    padding: 36px 0;
+    padding: 20px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .avatar-wrapper {
+    width: 100px;
+    height: 100px;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .contact-info {
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .contact-info a {
+    display: inline-block;
   }
 
   .separator {
