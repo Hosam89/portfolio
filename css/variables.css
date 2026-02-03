@@ -9,6 +9,7 @@
   --bg-primary: #f7f9fc;
   --bg-secondary: #ffffff;
   --bg-header: linear-gradient(135deg, #0d3b8a, #0b2d68);
+  --bg-nav: #ffffff;
   --bg-card: #ffffff;
   --bg-card-hover: rgba(255, 255, 255, 0.12);
 
@@ -39,6 +40,7 @@ body.dark-theme {
   --bg-primary: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   --bg-secondary: rgba(26, 26, 46, 0.9);
   --bg-header: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  --bg-nav: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
   --bg-card: rgba(26, 26, 46, 0.9);
   --bg-card-hover: rgba(94, 231, 223, 0.1);
 
