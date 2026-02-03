@@ -6,6 +6,7 @@
 import { initThemeToggle } from "./theme-toggle.js";
 import { initLanguageSwitcher } from "./language-switcher.js";
 import { initAnimations } from "./animations.js";
+import { initNavigation } from "./navigation.js";
 
 /**
  * Initialize the application when DOM is ready
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize language switcher
     initLanguageSwitcher();
+
+    // Initialize navigation
+    initNavigation();
 
     // Initialize all animations
     initAnimations();
