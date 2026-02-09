@@ -52,6 +52,9 @@
 
   .experience-grid {
     gap: 16px;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
   }
 
   .timeline-item {
