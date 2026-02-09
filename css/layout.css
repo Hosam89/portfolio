@@ -58,7 +58,7 @@
   border-radius: 50px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
-  animation: slideUp 0.8s ease-out;
+  animation: navSlideUp 0.8s ease-out;
 }
 
 .nav-list {

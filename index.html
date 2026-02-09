@@ -3,24 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Hosam Othman | Senior Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <!-- Modular CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <meta
+      name="description"
+      content="Portfolio of Hosam Othman, a senior full stack developer specializing in React, Node.js, TypeScript, and AWS."
+    />
+    <meta
+      name="keywords"
+      content="Hosam Othman, Full Stack Developer, React, Node.js, TypeScript, AWS, Portfolio"
+    />
+
+    <meta
+      property="og:title"
+      content="Hosam Othman | Senior Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Senior full stack developer focused on React, Node.js, TypeScript, and AWS."
+    />
+    <meta property="og:url" content="https://hosam.info/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="canonical" href="https://hosam.info/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hosam Othman",
+        "jobTitle": "Senior Full Stack Developer",
+        "url": "https://hosam.info/",
+        "email": "mailto:hosamothman1@gmail.com",
+        "telephone": "+491704641659",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Goslar",
+          "addressCountry": "DE"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/hosam-othman-a84403266/",
+          "https://github.com/Hosam89"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <!-- Theme Switcher -->
     <button class="theme-toggle" aria-label="Toggle theme">
       <span class="theme-icon sun-icon">☀️</span>
       <span class="theme-icon moon-icon">🌙</span>
     </button>
 
-    <!-- Language Switcher -->
     <div class="language-switcher">
       <button
         class="lang-btn active"
@@ -36,12 +75,11 @@
       </button>
     </div>
 
-    <!-- Main Navigation -->
     <nav class="main-nav">
       <ul class="nav-list">
         <li>
           <a
-            href="#home"
+            href="./index.html"
             class="nav-link active"
             data-en="Home"
             data-de="Startseite"
@@ -49,13 +87,17 @@
           >
         </li>
         <li>
-          <a href="#about" class="nav-link" data-en="About" data-de="Über mich"
+          <a
+            href="./about.html"
+            class="nav-link"
+            data-en="About"
+            data-de="Über mich"
             >About</a
           >
         </li>
         <li>
           <a
-            href="#skills"
+            href="./skills.html"
             class="nav-link"
             data-en="Skills"
             data-de="Fähigkeiten"
@@ -64,7 +106,7 @@
         </li>
         <li>
           <a
-            href="#experience"
+            href="./experience.html"
             class="nav-link"
             data-en="Experience"
             data-de="Erfahrung"
@@ -73,7 +115,7 @@
         </li>
         <li>
           <a
-            href="#contact"
+            href="./contact.html"
             class="nav-link"
             data-en="Contact"
             data-de="Kontakt"
@@ -83,7 +125,6 @@
       </ul>
     </nav>
 
-    <!-- Section: Home/Hero -->
     <section id="home" class="fullscreen-section active">
       <header class="header">
         <div class="container">
@@ -126,325 +167,6 @@
       </header>
     </section>
 
-    <!-- Section: About Me -->
-    <section id="about" class="fullscreen-section">
-      <div class="container section-container">
-        <h2 class="section-title" data-en="About Me" data-de="Über mich">
-          About Me
-        </h2>
-        <div class="about-content">
-          <p
-            class="about-text"
-            data-en="Innovative and performance-driven Senior Full Stack Developer with 5+ years of experience designing, developing, and deploying high-scale web applications and cloud-native systems. Proven expertise in JavaScript, TypeScript, React, Node.js, and NestJS, with strong command of AWS infrastructure, REST/GraphQL APIs, and real-time data handling. Adept at building component-driven frontends, architecting backend services, and leading cross-functional teams to deliver robust software solutions."
-            data-de="Innovativer und leistungsorientierter Senior Full Stack Entwickler mit 5+ Jahren Erfahrung in der Konzeption, Entwicklung und Bereitstellung hochskalierbarer Webanwendungen und Cloud-nativer Systeme. Nachgewiesene Expertise in JavaScript, TypeScript, React, Node.js und NestJS, mit fundierter Kenntnis der AWS-Infrastruktur, REST/GraphQL-APIs und Echtzeit-Datenverarbeitung. Kompetent im Erstellen komponentengetriebener Frontends, der Architektur von Backend-Services und der Leitung interdisziplinärer Teams zur Bereitstellung robuster Softwarelösungen."
-          >
-            Innovative and performance-driven
-            <strong>Senior Full Stack Developer</strong>
-            with 4+ years of experience designing, developing, and deploying
-            high-scale web applications and cloud-native systems. Proven
-            expertise in
-            <strong>JavaScript, TypeScript, React, Node.js, and NestJS</strong>,
-            with strong command of
-            <strong
-              >AWS infrastructure, REST/GraphQL APIs, and real-time data
-              handling</strong
-            >. Adept at building component-driven frontends, architecting
-            backend services, and leading cross-functional teams to deliver
-            robust software solutions.
-          </p>
-
-          <div class="info-cards">
-            <div class="info-card">
-              <h3 data-en="Details" data-de="Details">Details</h3>
-              <p>📍 Goslar, Germany</p>
-              <p>📞 01704641659</p>
-              <p>
-                📧
-                <a href="mailto:hosamothman1@gmail.com"
-                  >hosamothman1@gmail.com</a
-                >
-              </p>
-            </div>
-            <div class="info-card">
-              <h3 data-en="Languages" data-de="Sprachen">Languages</h3>
-              <ul class="languages">
-                <li>
-                  <span>German</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-                <li>
-                  <span>English</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-                <li>
-                  <span>Arabic</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Skills -->
-    <section id="skills" class="fullscreen-section">
-      <div class="container section-container">
-        <h2
-          class="section-title"
-          data-en="Technical Skills"
-          data-de="Technische Fähigkeiten"
-        >
-          Technical Skills
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul>
-              <li>React.js, Next.js</li>
-              <li>HTML5, CSS3, Sass/SCSS</li>
-              <li>PrimeFaces, Zustand, WebSocket</li>
-              <li>Responsive Design, WCAG</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <ul>
-              <li>Node.js, Express.js, NestJS</li>
-              <li>GraphQL, REST APIs</li>
-              <li>Firebase, Monorepos</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Cloud/DevOps</h3>
-            <ul>
-              <li>AWS (S3, Lambda, EC2, ECS and others)</li>
-              <li>Docker, CI/CD, Git</li>
-              <li>GitHub Actions</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Testing & Databases</h3>
-            <ul>
-              <li>Unit, Integration, UAT</li>
-              <li>PostgreSQL, MongoDB</li>
-              <li>Firebase Realtime DB</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Languages & Practices</h3>
-            <ul>
-              <li>JavaScript, TypeScript, Python, Java</li>
-              <li>Agile, Scrum, TDD, Pair Programming</li>
-              <li>Code Reviews, Clean Architecture</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Experience -->
-    <section id="experience" class="fullscreen-section">
-      <div class="container section-container">
-        <h2
-          class="section-title"
-          data-en="Employment History"
-          data-de="Berufserfahrung"
-        >
-          Employment History
-        </h2>
-        <div class="experience-grid">
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Fullstack Developer at Bornemann AG, Goslar"
-                data-de="Fullstack-Entwickler bei Bornemann AG, Goslar"
-              >
-                Fullstack Developer at Bornemann AG, Goslar
-              </h3>
-              <span
-                class="date"
-                data-en="June 2023 — Present"
-                data-de="Juni 2023 — Heute"
-                >June 2023 — Present</span
-              >
-            </div>
-            <p class="company">Goslar, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Architected and implemented a NestJS monorepo REST API deployed on AWS for seamless IoT mesh communication."
-                data-de="Architektur und Implementierung einer NestJS-Monorepo-REST-API auf AWS für nahtlose IoT-Mesh-Kommunikation."
-              >
-                Architected and implemented a
-                <strong>NestJS monorepo REST API</strong> deployed on
-                <strong>AWS</strong> for seamless IoT mesh communication.
-              </li>
-              <li
-                data-en="Developed a real-time IoT configuration platform using React, WebSocket, and Zustand, enhancing operational efficiency."
-                data-de="Entwicklung einer Echtzeit-IoT-Konfigurationsplattform mit React, WebSocket und Zustand zur Steigerung der Betriebseffizienz."
-              >
-                Developed a
-                <strong>real-time IoT configuration platform</strong> using
-                React, WebSocket, and Zustand, enhancing operational efficiency.
-              </li>
-              <li
-                data-en="Built a modular, scalable UI system following component-driven design and accessibility best practices (WCAG)."
-                data-de="Entwicklung eines modularen, skalierbaren UI-Systems nach komponentengetriebenem Design und Barrierefreiheits-Best-Practices (WCAG)."
-              >
-                Built a modular, scalable UI system following component-driven
-                design and accessibility best practices (WCAG).
-              </li>
-              <li
-                data-en="Delivered a robust logbook management system using React and GraphQL, streamlining administrative workflows."
-                data-de="Bereitstellung eines robusten Logbuch-Verwaltungssystems mit React und GraphQL zur Optimierung administrativer Arbeitsabläufe."
-              >
-                Delivered a robust
-                <strong>logbook management system</strong> using React and
-                GraphQL, streamlining administrative workflows.
-              </li>
-              <li
-                data-en="Led redesign of the central authentication portal using PrimeFaces and custom CSS for improved usability."
-                data-de="Leitung der Neugestaltung des zentralen Authentifizierungsportals mit PrimeFaces und benutzerdefiniertem CSS für verbesserte Benutzerfreundlichkeit."
-              >
-                Led redesign of the central authentication portal using
-                <strong>PrimeFaces</strong> and custom CSS for improved
-                usability.
-              </li>
-            </ul>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Class Tutor for Full-Stack Development at Digital Career Institute, Münster"
-                data-de="Kursleiter für Full-Stack-Entwicklung am Digital Career Institute, Münster"
-              >
-                Class Tutor for Full-Stack Development at Digital Career
-                Institute, Münster
-              </h3>
-              <span
-                class="date"
-                data-en="June 2022 — June 2023"
-                data-de="Juni 2022 — Juni 2023"
-                >June 2022 — June 2023</span
-              >
-            </div>
-            <p class="company">Münster, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Mentored a cohort of 10 students during an intensive full-stack course, improving completion rates."
-                data-de="Betreute eine Kohorte von 10 Studierenden während eines intensiven Full-Stack-Kurses und verbesserte die Abschlussquoten."
-              >
-                Mentored a cohort of <strong>10 students</strong> during an
-                intensive full-stack course, improving completion rates.
-              </li>
-              <li
-                data-en="Delivered advanced workshops on React, Node.js, and REST API development, improving student proficiency and project quality."
-                data-de="Durchführung fortgeschrittener Workshops zu React, Node.js und REST-API-Entwicklung zur Verbesserung der Studierenden-Kompetenz und Projektqualität."
-              >
-                Delivered advanced workshops on
-                <strong>React, Node.js, and REST API development</strong>,
-                improving student proficiency and project quality.
-              </li>
-              <li
-                data-en="Implemented a peer programming framework that increased collaboration and coding confidence."
-                data-de="Implementierung eines Peer-Programming-Frameworks zur Steigerung der Zusammenarbeit und des Programmiervertrauens."
-              >
-                Implemented a <strong>peer programming framework</strong> that
-                increased collaboration and coding confidence.
-              </li>
-              <li
-                data-en="Designed hands-on coding challenges and tutorials rated 'extremely helpful' by over 90% of participants."
-                data-de="Entwicklung praktischer Programmieraufgaben und Tutorials, die von über 90% der Teilnehmenden als 'äußerst hilfreich' bewertet wurden."
-              >
-                Designed hands-on coding challenges and tutorials rated
-                <strong>"extremely helpful" by over 90%</strong> of
-                participants.
-              </li>
-            </ul>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Plant and Machine Operator at Hengst Filtration, Münster"
-                data-de="Anlagen- und Maschinenbediener bei Hengst Filtration, Münster"
-              >
-                Plant and Machine Operator at Hengst Filtration, Münster
-              </h3>
-              <span
-                class="date"
-                data-en="July 2016 — August 2018"
-                data-de="Juli 2016 — August 2018"
-                >July 2016 — August 2018</span
-              >
-            </div>
-            <p class="company">Münster, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Operated, maintained, and troubleshot industrial machinery to ensure uninterrupted production."
-                data-de="Bedienung, Wartung und Fehlerbehebung von Industriemaschinen zur Sicherstellung einer unterbrechungsfreien Produktion."
-              >
-                Operated, maintained, and troubleshot
-                <strong>industrial machinery</strong> to ensure uninterrupted
-                production.
-              </li>
-              <li
-                data-en="Collected production data to inform continuous improvement and reduce equipment downtime."
-                data-de="Erfassung von Produktionsdaten zur Information kontinuierlicher Verbesserungen und Reduzierung von Anlagenausfallzeiten."
-              >
-                Collected production data to inform
-                <strong>continuous improvement</strong> and reduce equipment
-                downtime.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: Contact -->
-    <section id="contact" class="fullscreen-section">
-      <div class="container section-container">
-        <h2 class="section-title" data-en="Get In Touch" data-de="Kontakt">
-          Get In Touch
-        </h2>
-        <div class="contact-content">
-          <div class="contact-cards">
-            <a href="mailto:hosamothman1@gmail.com" class="contact-card">
-              <span class="contact-icon">📧</span>
-              <h3>Email</h3>
-              <p>hosamothman1@gmail.com</p>
-            </a>
-            <a href="tel:+491704641659" class="contact-card">
-              <span class="contact-icon">📞</span>
-              <h3>Phone</h3>
-              <p>01704641659</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hosam-othman-a84403266/"
-              target="_blank"
-              class="contact-card"
-            >
-              <span class="contact-icon">💼</span>
-              <h3>LinkedIn</h3>
-              <p>Connect with me</p>
-            </a>
-            <a
-              href="https://github.com/Hosam89"
-              target="_blank"
-              class="contact-card"
-            >
-              <span class="contact-icon">💻</span>
-              <h3>GitHub</h3>
-              <p>Check my projects</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Application Script (ES6 Modules) -->
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
