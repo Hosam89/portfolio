@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   animation: slideInLeft 0.6s ease-out;
   overflow: hidden;
@@ -68,12 +69,13 @@ body.dark-theme .moon-icon {
   z-index: 1000;
   display: flex;
   gap: 10px;
-  background: var(--bg-header);
+  background: var(--bg-nav);
   backdrop-filter: blur(10px);
   padding: 8px;
   border-radius: 50px;
   box-shadow: var(--shadow-md);
   animation: slideInRight 0.6s ease-out;
+  border: 1px solid var(--border-color);
 }
 
 .lang-btn {
@@ -83,9 +85,12 @@ body.dark-theme .moon-icon {
   padding: 10px 16px;
   border: 2px solid transparent;
   background: transparent;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.9rem;
   font-weight: 600;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -99,7 +104,7 @@ body.dark-theme .moon-icon {
 }
 
 .lang-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-card-hover);
   transform: translateY(-2px);
 }
 
@@ -108,10 +113,14 @@ body.dark-theme .moon-icon {
 }
 
 .lang-btn.active {
-  background: linear-gradient(135deg, #5ee7df, #4fc3e4);
-  color: #0d3b8a;
-  border-color: #5ee7df;
-  box-shadow: 0 4px 15px rgba(94, 231, 223, 0.4);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-alt)
+  );
+  color: var(--color-primary-dark);
+  border-color: var(--color-accent);
+  box-shadow: 0 6px 18px var(--card-glow);
   animation: pulse 2s ease-in-out infinite;
 }
 

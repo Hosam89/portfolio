@@ -56,7 +56,8 @@
   backdrop-filter: blur(20px);
   padding: 12px 20px;
   border-radius: 50px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
   animation: slideUp 0.8s ease-out;
 }
 
@@ -74,14 +75,20 @@
   color: var(--text-primary);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   transition: all 0.3s ease;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .nav-link:hover {
   color: var(--color-accent);
   transform: translateY(-2px);
+  border-color: var(--color-accent);
+  background: var(--bg-card);
 }
 
 .nav-link.active {
@@ -91,12 +98,12 @@
     var(--color-accent-alt)
   );
   color: #fff;
-  box-shadow: 0 4px 16px rgba(94, 231, 223, 0.4);
+  box-shadow: 0 6px 18px var(--card-glow);
 }
 
 /* Home Section Specific */
 #home {
-  background: linear-gradient(135deg, var(--bg-primary), var(--bg-card));
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
   justify-content: center;
   padding-top: 100px;
 }
@@ -110,17 +117,29 @@
   text-align: center;
   position: sticky;
   top: 0;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   width: 100%;
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   backdrop-filter: blur(10px);
   padding: 20px 0;
   z-index: 100;
   margin-right: -10px;
   border-radius: 16px;
-  border: none;
-  box-shadow: none;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
   animation: fadeIn 0.8s ease-out;
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-title::before {
+  content: "//";
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 .section-title::after {
@@ -170,6 +189,13 @@
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(34, 211, 238, 0.08),
+    transparent 55%
+  );
 }
 
 .info-card:hover {
@@ -182,6 +208,9 @@
   font-size: 1.3rem;
   font-weight: 800;
   margin-bottom: 16px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .info-card p {
@@ -206,6 +235,13 @@
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   animation: fadeUp 0.6s ease-out both;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.08),
+    transparent 60%
+  );
 }
 
 .skill-category:hover {
@@ -221,6 +257,9 @@
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .skill-category ul {
@@ -238,12 +277,13 @@
 }
 
 .skill-category li::before {
-  content: "•";
+  content: ">";
   position: absolute;
   left: 0;
-  color: var(--color-primary);
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: var(--color-accent-alt);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: var(--font-mono);
 }
 
 .skill-category li:hover {
@@ -287,6 +327,13 @@
   animation: fadeUp 0.7s ease both;
   transition: all 0.3s ease;
   height: fit-content;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(34, 211, 238, 0.06),
+    transparent 65%
+  );
 }
 
 .timeline-item:hover {
@@ -317,6 +364,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
+  font-family: var(--font-mono);
 }
 
 .company {
@@ -351,12 +399,13 @@
 }
 
 .responsibilities li::before {
-  content: "•";
+  content: "->";
   position: absolute;
   left: 0;
-  color: var(--color-primary);
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
 }
 
 .responsibilities li:hover {
@@ -400,6 +449,13 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+    135deg,
+    rgba(249, 115, 22, 0.08),
+    transparent 65%
+  );
 }
 
 .contact-card:hover {
@@ -418,6 +474,9 @@
   font-size: 1.3rem;
   font-weight: 800;
   margin: 0;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .contact-card p {

@@ -3,7 +3,12 @@
  * Handles bilingual support (English/German) with persistence
  */
 
-import { createRipple, getStorageItem, setStorageItem } from "./utils.js";
+import {
+  createRipple,
+  getStorageItem,
+  setStorageItem,
+  typewriterText,
+} from "./utils.js";
 
 let currentLang = "en";
 let langButtons = [];
@@ -103,9 +108,20 @@ function animateTextChange(element, translation, index) {
   element.style.opacity = "0";
   element.style.transform = "translateY(-10px)";
 
+  if (element.classList.contains("typewriter")) {
+    element.dataset.typewriterActive = "true";
+  }
+
   setTimeout(
     () => {
       // Handle different element types
+      if (element.classList.contains("typewriter")) {
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+        typewriterText(element, translation, { speed: 70, startDelay: 120 });
+        return;
+      }
+
       if (element.tagName === "P" && element.querySelector("strong")) {
         // For paragraphs with strong tags, preserve HTML
         element.innerHTML = translation.replace(

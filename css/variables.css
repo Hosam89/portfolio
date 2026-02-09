@@ -6,29 +6,38 @@
 /* CSS Variables for Theming */
 :root {
   /* Light Theme (Default) */
-  --bg-primary: #f7f9fc;
-  --bg-secondary: #ffffff;
-  --bg-header: linear-gradient(135deg, #0d3b8a, #0b2d68);
-  --bg-nav: #ffffff;
-  --bg-card: #ffffff;
-  --bg-card-hover: rgba(255, 255, 255, 0.12);
+  --font-sans:
+    "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono:
+    "JetBrains Mono", "SFMono-Regular", "Consolas", "Liberation Mono", monospace;
 
-  --text-primary: #1f2a44;
-  --text-secondary: #f6f8fb;
+  --bg-primary: #f7f2e8;
+  --bg-secondary: #fffaf3;
+  --bg-header: linear-gradient(135deg, #0b1b2b, #0f3d3e);
+  --bg-nav: rgba(255, 250, 242, 0.85);
+  --bg-card: #fffdf8;
+  --bg-card-hover: rgba(15, 23, 42, 0.06);
+
+  --text-primary: #0f172a;
+  --text-secondary: #f8fafc;
   --text-muted: #6b7280;
 
-  --color-accent: #5ee7df;
-  --color-accent-alt: #4fc3e4;
-  --color-primary: #0d3b8a;
-  --color-primary-dark: #0b2d68;
+  --color-accent: #22d3ee;
+  --color-accent-alt: #f97316;
+  --color-primary: #0f172a;
+  --color-primary-dark: #0b1120;
 
-  --border-color: #e6ecf5;
-  --shadow-sm: 0 10px 30px rgba(17, 24, 39, 0.08);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --border-color: #e6dfd4;
+  --shadow-sm: 0 12px 30px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.18);
 
-  --scrollbar-bg: #e5e7eb;
-  --scrollbar-thumb: #9ca3af;
+  --scrollbar-bg: #efe8dc;
+  --scrollbar-thumb: #c3b9a8;
+
+  --grid-line: rgba(15, 23, 42, 0.06);
+  --grid-line-strong: rgba(15, 23, 42, 0.12);
+  --card-glow: rgba(34, 211, 238, 0.2);
 
   transition:
     background-color 0.3s ease,
@@ -37,27 +46,31 @@
 
 /* Dark Theme */
 body.dark-theme {
-  --bg-primary: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  --bg-secondary: rgba(26, 26, 46, 0.9);
-  --bg-header: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  --bg-nav: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  --bg-card: rgba(26, 26, 46, 0.9);
-  --bg-card-hover: rgba(94, 231, 223, 0.1);
+  --bg-primary: #0a1016;
+  --bg-secondary: rgba(12, 17, 24, 0.92);
+  --bg-header: linear-gradient(135deg, #0b1b2b, #062d2c);
+  --bg-nav: rgba(12, 17, 24, 0.85);
+  --bg-card: rgba(12, 17, 24, 0.88);
+  --bg-card-hover: rgba(34, 211, 238, 0.08);
 
-  --text-primary: #e0e0e0;
-  --text-secondary: #ffffff;
-  --text-muted: #b8b8d1;
+  --text-primary: #e2e8f0;
+  --text-secondary: #f8fafc;
+  --text-muted: #94a3b8;
 
-  --color-accent: #5ee7df;
-  --color-accent-alt: #ff6b6b;
-  --color-primary: #5ee7df;
-  --color-primary-dark: #1a1a2e;
+  --color-accent: #22d3ee;
+  --color-accent-alt: #f97316;
+  --color-primary: #e2e8f0;
+  --color-primary-dark: #0b1120;
 
-  --border-color: rgba(94, 231, 223, 0.2);
-  --shadow-sm: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 12px 40px rgba(94, 231, 223, 0.2);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --border-color: rgba(148, 163, 184, 0.2);
+  --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 16px 48px rgba(15, 23, 42, 0.6);
+  --shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.65);
 
-  --scrollbar-bg: #0f0c29;
-  --scrollbar-thumb: linear-gradient(135deg, #5ee7df, #ff6b6b);
+  --scrollbar-bg: #0b1218;
+  --scrollbar-thumb: linear-gradient(135deg, #22d3ee, #f97316);
+
+  --grid-line: rgba(148, 163, 184, 0.08);
+  --grid-line-strong: rgba(148, 163, 184, 0.16);
+  --card-glow: rgba(249, 115, 22, 0.15);
 }

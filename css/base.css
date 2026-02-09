@@ -12,20 +12,79 @@
 
 /* Base Styles */
 body {
-  font-family:
-    "Inter",
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
   color: var(--text-primary);
-  background: var(--bg-primary);
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(34, 211, 238, 0.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(249, 115, 22, 0.14),
+      transparent 46%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--grid-line),
+      var(--grid-line) 1px,
+      transparent 1px,
+      transparent 38px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid-line),
+      var(--grid-line) 1px,
+      transparent 1px,
+      transparent 38px
+    );
+  background-size:
+    100% 100%,
+    100% 100%,
+    38px 38px,
+    38px 38px;
   background-attachment: fixed;
   min-height: 100vh;
   transition:
     background 0.3s ease,
     color 0.3s ease;
+}
+
+body.dark-theme {
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(34, 211, 238, 0.12),
+      transparent 44%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(249, 115, 22, 0.1),
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--grid-line),
+      var(--grid-line) 1px,
+      transparent 1px,
+      transparent 42px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--grid-line),
+      var(--grid-line) 1px,
+      transparent 1px,
+      transparent 42px
+    );
+  background-size:
+    100% 100%,
+    100% 100%,
+    42px 42px,
+    42px 42px;
 }
 
 /* Container */

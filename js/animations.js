@@ -1,3 +1,5 @@
+import { typewriterText } from "./utils.js";
+
 /**
  * Animations Module
  * Handles all visual animations and effects on the page
@@ -102,22 +104,27 @@ function createParticle() {
  * Adds typing animation to the name element
  */
 function initTypingAnimation() {
-  const nameElement = document.querySelector(".name");
-  if (!nameElement) return;
+  const titleElement = document.querySelector(".title.typewriter");
+  if (!titleElement) return;
 
-  const text = nameElement.textContent;
-  nameElement.textContent = "";
-  nameElement.style.opacity = "1";
+  const getTitleText = () => {
+    const lang = document.documentElement.lang || "en";
+    return (
+      titleElement.getAttribute(`data-${lang}`) || titleElement.textContent
+    );
+  };
 
-  let i = 0;
-  const typingInterval = setInterval(() => {
-    if (i < text.length) {
-      nameElement.textContent += text.charAt(i);
-      i++;
-    } else {
-      clearInterval(typingInterval);
-    }
-  }, 100);
+  if (titleElement.__typewriterRepeat) {
+    clearInterval(titleElement.__typewriterRepeat);
+  }
+
+  if (titleElement.dataset.typewriterActive !== "true") {
+    typewriterText(titleElement, getTitleText(), { speed: 80, startDelay: 0 });
+  }
+
+  titleElement.__typewriterRepeat = setInterval(() => {
+    typewriterText(titleElement, getTitleText(), { speed: 80, startDelay: 0 });
+  }, 30000);
 }
 
 /**

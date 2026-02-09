@@ -16,6 +16,7 @@
 
   .section-title {
     font-size: 2rem;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -33,7 +34,8 @@
 
   .nav-link {
     padding: 10px 16px;
-    font-size: 0.85rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
   }
 
   .fullscreen-section {
@@ -182,6 +184,7 @@
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 30px;
+    letter-spacing: 0.05em;
   }
 
   .nav-list {
@@ -190,7 +193,8 @@
 
   .nav-link {
     padding: 8px 12px;
-    font-size: 0.75rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
   }
 
   .fullscreen-section {

@@ -71,3 +71,38 @@ export function getStorageItem(key, defaultValue) {
 export function setStorageItem(key, value) {
   localStorage.setItem(key, value);
 }
+
+/**
+ * Types text into an element with a typewriter effect
+ * @param {HTMLElement} element - The element to type into
+ * @param {string} text - The text to type
+ * @param {object} options - Timing configuration
+ * @param {number} options.speed - Milliseconds per character
+ * @param {number} options.startDelay - Delay before typing starts
+ */
+export function typewriterText(element, text, options = {}) {
+  const speed = options.speed ?? 80;
+  const startDelay = options.startDelay ?? 0;
+
+  if (element.__typewriterTimer) {
+    clearInterval(element.__typewriterTimer);
+  }
+  if (element.__typewriterTimeout) {
+    clearTimeout(element.__typewriterTimeout);
+  }
+
+  element.textContent = "";
+  element.style.opacity = "1";
+
+  let i = 0;
+  element.__typewriterTimeout = setTimeout(() => {
+    element.__typewriterTimer = setInterval(() => {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i += 1;
+      } else {
+        clearInterval(element.__typewriterTimer);
+      }
+    }, speed);
+  }, startDelay);
+}
