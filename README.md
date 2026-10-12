@@ -1,139 +1,43 @@
-# Portfolio Website
+# hosam.info
 
-A modern, animated portfolio website with bilingual support (English/German) and dark/light theme toggle.
+Personal portfolio of Hosam Othman, full stack developer. Plain HTML, CSS and ES modules with no build step, hosted on GitHub Pages.
 
 ## Features
 
-- 🌐 **Bilingual Support**: Toggle between English and German
-- 🌓 **Dark/Light Theme**: Switch between dark and light modes
-- ✨ **Smooth Animations**: Multiple engaging animations throughout
-- 📱 **Fully Responsive**: Works on all devices
-- 🎨 **Modern Design**: Clean and professional interface
-- 🌟 **Interactive Elements**: Hover effects, scroll animations, and more
-- 💾 **Persistent Settings**: Your theme and language preferences are saved
+- **Five indexable pages**: Home, About, Experience, Skills, Contact, each with its own title, description and canonical URL
+- **3D hero**: the full stack as three floating layers (Frontend, API, Database) with requests and responses flowing between them, rendered with [three.js](https://threejs.org) (loaded from jsDelivr only on the home page)
+- **English / German**: English is in the HTML; German translations live in `js/i18n.js`
+- **Light / dark theme**: follows the system setting by default and remembers the choice
+- **Responsive and accessible**: works from 320px wide, keyboard friendly, respects `prefers-reduced-motion`
 
-## Animations Included
+## Running locally
 
-1. **Theme Switcher**
-   - Smooth color transitions between themes
-   - Rotating icon animation on toggle
-   - Ripple effect on click
-   - Persistent theme preference
+ES modules don't load from `file://`, so serve the folder:
 
-2. **Language Switcher**
-   - Slide-in animation on page load
-   - Ripple effect on click
-   - Pulse animation for active language
-   - Smooth translation transitions
-
-3. **Header Animations**
-   - Typing effect on name
-   - Floating avatar with bounce-in effect
-   - Glowing background animation
-   - Parallax scrolling effect
-   - Shimmer effect on name text
-
-4. **Content Animations**
-   - Scroll reveal for sections
-   - Staggered fade-in for content
-   - Hover lift effects on cards
-   - Gradient underline animation on titles
-   - Floating particles in header
-
-5. **Interactive Elements**
-   - Contact link shimmer effects
-   - Skill category scale animations
-   - Project card hover effects
-   - Timeline item animations
-
-## How to Use
-
-1. Open `index.html` in your web browser
-2. **Theme Toggle**: Click the sun/moon button (☀️/🌙) in the top-left corner to switch between light and dark themes
-3. **Language Toggle**: Click the language switcher (🇬🇧 EN / 🇩🇪 DE) in the top-right corner to switch languages
-4. Your preferences (theme and language) are saved automatically in localStorage
-
-## Files & Structure
-
-```
-portfolio/
-├── index.html           # Main HTML structure with bilingual data attributes
-├── style.css            # All styles, animations, and theme variables
-├── js/                  # JavaScript modules (ES6)
-│   ├── main.js          # Application entry point
-│   ├── theme-toggle.js  # Dark/light theme functionality
-│   ├── language-switcher.js # English/German translations
-│   ├── animations.js    # All visual effects and animations
-│   ├── utils.js         # Reusable utility functions
-│   └── README.md        # Detailed module documentation
-└── README.md            # This file
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000
 ```
 
-### JavaScript Architecture
+## Structure
 
-The JavaScript code follows **ES6 module standards** with clear **separation of concerns**:
+```
+├── index.html, about.html, experience.html, skills.html, contact.html
+├── css/styles.css        # tokens (colors, fonts, spacing) at the top, then sections
+├── js/
+│   ├── main.js           # entry point
+│   ├── i18n.js           # language switcher + German strings
+│   ├── theme.js          # light/dark toggle
+│   ├── navigation.js     # mobile menu, header on scroll
+│   ├── reveal.js         # scroll-in animations
+│   ├── copy.js           # copy-to-clipboard on the contact page
+│   └── hero-scene.js     # three.js scene in the home hero
+└── assets/img/           # portrait and social preview image
+```
 
-- **Modular Design**: Each feature is in its own file
-- **Single Responsibility**: Each module has one clear purpose
-- **Reusable Utilities**: Common functions in utils.js
-- **Easy Maintenance**: Update features independently
-- **Better Testing**: Isolated functions are easier to test
+## Editing content
 
-See `js/README.md` for detailed module documentation.
-
-## Browser Support
-
-Works in all modern browsers that support:
-
-- CSS animations
-- CSS Grid
-- Flexbox
-- CSS Variables (Custom Properties)
-- localStorage
-- IntersectionObserver API
-
-## Customization
-
-### Changing Colors
-
-The portfolio uses CSS variables for easy theming. Edit the `:root` and `.dark-theme` variables in `style.css`:
-
-**Light Theme:**
-
-- `--color-primary`: `#0d3b8a` (Primary blue)
-- `--color-accent`: `#5ee7df` (Accent cyan)
-- `--color-accent-alt`: `#4fc3e4` (Secondary accent)
-- `--bg-primary`: `#f7f9fc` (Background)
-- `--text-primary`: `#1f2a44` (Text color)
-
-**Dark Theme:**
-
-- `--color-primary`: `#5ee7df` (Primary cyan)
-- `--color-accent`: `#5ee7df` (Accent cyan)
-- `--color-accent-alt`: `#ff6b6b` (Coral accent)
-- `--bg-primary`: Dark gradient
-- `--text-primary`: `#e0e0e0` (Light text)
-
-### Creating a Custom Theme
-
-1. Add your theme colors in the CSS variables section
-2. Create a new theme class like `.custom-theme`
-3. Update the JavaScript to toggle your custom theme
-
-### Adding More Languages
-
-1. Add data attributes to HTML elements (e.g., `data-fr="French text"`)
-2. Add new language button in the language switcher
-3. Update the JavaScript in `script.js` to handle the new language
-
-### Modifying Animations
-
-All animations are defined in `style.css`. Look for `@keyframes` definitions to customize:
-
-- Duration: Change the time value (e.g., `3s` to `5s`)
-- Effect: Modify the animation properties
-- Delay: Adjust `animation-delay` values
-
-## Credits
-
-Created by Hosam Othman
+- **Text**: edit the English directly in the HTML. If the element has `data-i18n="key"`, update the German string with the same key in `js/i18n.js`.
+- **Colors**: change the custom properties at the top of `css/styles.css` (`:root` for light, `[data-theme="dark"]` for dark). The 3D scene reads `--accent` and the `--scene-*` colors from there too.
+- **3D scene**: tweak the constants at the top of `js/hero-scene.js` (layer size and spacing, camera, packet speed). The layer labels are the `.scene-tag` elements in `index.html`. To use a different 3D piece, replace that module. It only has to export `initHeroScene(container)` and draw into the `<canvas>` inside `[data-hero-scene]`.
+- **Header and footer** are repeated in every page, so change them in all five files.

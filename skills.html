@@ -3,159 +3,277 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Technical Skills | Hosam Othman</title>
+    <title data-i18n="meta.skills">Skills | Hosam Othman, Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Technical skills of Hosam Othman: TypeScript, React, Node.js, NestJS, GraphQL, Kafka, AWS, Terraform, Docker, PostgreSQL and more."
+    />
+    <link rel="canonical" href="https://hosam.info/skills.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosam.info/skills.html" />
+    <meta property="og:title" content="Skills | Hosam Othman, Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="TypeScript, React, Node.js, NestJS, GraphQL, Kafka, AWS, Terraform and more."
+    />
+    <meta property="og:image" content="https://hosam.info/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <meta
-      name="description"
-      content="Explore the technical skills of Hosam Othman across frontend, backend, cloud, DevOps, testing, and databases."
-    />
-    <meta
-      name="keywords"
-      content="Hosam Othman skills, Frontend, Backend, Cloud, DevOps, React, Node.js, AWS"
-    />
-
-    <meta property="og:title" content="Technical Skills | Hosam Othman" />
-    <meta
-      property="og:description"
-      content="A focused view of Hosam Othman's technical stack across frontend, backend, and cloud."
-    />
-    <meta property="og:url" content="https://hosam.info/skills.html" />
-    <meta property="og:type" content="website" />
-
-    <link rel="canonical" href="https://hosam.info/skills.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <button class="theme-toggle" aria-label="Toggle theme">
-      <span class="theme-icon sun-icon">☀️</span>
-      <span class="theme-icon moon-icon">🌙</span>
-    </button>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-    <div class="language-switcher">
-      <button
-        class="lang-btn active"
-        data-lang="en"
-        aria-label="Switch to English"
-      >
-        <span class="flag">🇬🇧</span>
-        <span class="lang-text">EN</span>
-      </button>
-      <button class="lang-btn" data-lang="de" aria-label="Switch to German">
-        <span class="flag">🇩🇪</span>
-        <span class="lang-text">DE</span>
-      </button>
-    </div>
-
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li>
-          <a
-            href="./index.html"
-            class="nav-link"
-            data-en="Home"
-            data-de="Startseite"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="./about.html"
-            class="nav-link"
-            data-en="About"
-            data-de="Über mich"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="./skills.html"
-            class="nav-link active"
-            data-en="Skills"
-            data-de="Fähigkeiten"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            href="./experience.html"
-            class="nav-link"
-            data-en="Experience"
-            data-de="Erfahrung"
-            >Experience</a
-          >
-        </li>
-        <li>
-          <a
-            href="./contact.html"
-            class="nav-link"
-            data-en="Contact"
-            data-de="Kontakt"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <section id="skills" class="fullscreen-section active">
-      <div class="container section-container">
-        <h2
-          class="section-title"
-          data-en="Technical Skills"
-          data-de="Technische Fähigkeiten"
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Hosam Othman, home"
+          data-i18n-attr="aria-label:nav.brand"
         >
-          Technical Skills
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul>
-              <li>React.js, Next.js</li>
-              <li>HTML5, CSS3, Sass/SCSS</li>
-              <li>PrimeFaces, Zustand, WebSocket</li>
-              <li>Responsive Design, WCAG</li>
-            </ul>
+          <span class="brand-mark" aria-hidden="true">HO</span>
+          <span class="brand-name">Hosam Othman</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="skills.html" aria-current="page" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Language"
+            data-i18n-attr="aria-label:nav.language"
+          >
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
           </div>
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <ul>
-              <li>Node.js, Express.js, NestJS</li>
-              <li>GraphQL, REST APIs</li>
-              <li>Firebase, Monorepos</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Cloud/DevOps</h3>
-            <ul>
-              <li>AWS (S3, Lambda, EC2, ECS and others)</li>
-              <li>Docker, CI/CD, Git</li>
-              <li>GitHub Actions</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Testing & Databases</h3>
-            <ul>
-              <li>Unit, Integration, UAT</li>
-              <li>PostgreSQL, MongoDB</li>
-              <li>Firebase Realtime DB</li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Languages & Practices</h3>
-            <ul>
-              <li>JavaScript, TypeScript, Python, Java</li>
-              <li>Agile, Scrum, TDD, Pair Programming</li>
-              <li>Code Reviews, Clean Architecture</li>
-            </ul>
-          </div>
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle color theme"
+            data-i18n-attr="aria-label:nav.theme"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            data-menu-toggle
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Menu"
+            data-i18n-attr="aria-label:nav.menu"
+          >
+            <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <script type="module" src="js/main.js"></script>
+    <main id="main">
+      <section class="container page-hero">
+        <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+        <h1 class="page-title" data-i18n="skills.title">Tools I use to ship reliable software.</h1>
+        <p class="page-lead" data-i18n="skills.lead">
+          A full-stack toolkit centered on TypeScript, covering frontend, backend and cloud
+          infrastructure.
+        </p>
+      </section>
+
+      <section class="container" aria-label="Skills" data-i18n-attr="aria-label:skills.eyebrow">
+        <ul class="skills-grid" role="list">
+          <li class="card skill-card is-featured" data-reveal>
+            <h2><span data-i18n="skills.core">Core stack</span></h2>
+            <ul class="tags" role="list">
+              <li class="tag">TypeScript</li>
+              <li class="tag">React</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">NestJS</li>
+              <li class="tag">AWS</li>
+              <li class="tag">REST / GraphQL</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal>
+            <h2>Frontend</h2>
+            <ul class="tags" role="list">
+              <li class="tag">React</li>
+              <li class="tag">Zustand</li>
+              <li class="tag">HTML5</li>
+              <li class="tag">CSS3</li>
+              <li class="tag">Sass/SCSS</li>
+              <li class="tag" data-i18n="skills.responsive">Responsive design</li>
+              <li class="tag" data-i18n="skills.a11y">Accessibility (WCAG)</li>
+              <li class="tag">PrimeFaces</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 1">
+            <h2>Backend</h2>
+            <ul class="tags" role="list">
+              <li class="tag">Node.js</li>
+              <li class="tag">NestJS</li>
+              <li class="tag">Express.js</li>
+              <li class="tag">REST APIs</li>
+              <li class="tag">GraphQL</li>
+              <li class="tag">WebSocket</li>
+              <li class="tag">Kafka</li>
+              <li class="tag">Monorepos</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 2">
+            <h2>Cloud &amp; DevOps</h2>
+            <ul class="tags" role="list">
+              <li class="tag">AWS (S3, Lambda, EC2, IoT)</li>
+              <li class="tag">Terraform</li>
+              <li class="tag">Docker</li>
+              <li class="tag">GitHub Actions</li>
+              <li class="tag">CI/CD</li>
+              <li class="tag">Grafana</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 3">
+            <h2>
+              <span data-i18n="skills.databases">Databases</span>
+            </h2>
+            <ul class="tags" role="list">
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">MongoDB</li>
+              <li class="tag">Tiger Cloud</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal>
+            <h2>Testing</h2>
+            <ul class="tags" role="list">
+              <li class="tag">Jest</li>
+              <li class="tag" data-i18n="skills.unit">Unit testing</li>
+              <li class="tag" data-i18n="skills.integration">Integration testing</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 1">
+            <h2>
+              <span data-i18n="skills.languages">Programming languages</span>
+            </h2>
+            <ul class="tags" role="list">
+              <li class="tag">JavaScript</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Python</li>
+              <li class="tag">Java</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 2">
+            <h2>
+              <span data-i18n="skills.practices">Practices</span>
+            </h2>
+            <ul class="tags" role="list">
+              <li class="tag">Agile</li>
+              <li class="tag">Scrum</li>
+              <li class="tag">TDD</li>
+              <li class="tag" data-i18n="skills.pairing">Pair programming</li>
+              <li class="tag" data-i18n="skills.reviews">Code reviews</li>
+              <li class="tag" data-i18n="skills.clean">Clean architecture</li>
+            </ul>
+          </li>
+
+          <li class="card skill-card" data-reveal style="--reveal-delay: 3">
+            <h2>
+              <span data-i18n="skills.spoken">Spoken languages</span>
+            </h2>
+            <ul class="tags" role="list">
+              <li class="tag" data-i18n="lang.germanLevel">German · C1</li>
+              <li class="tag" data-i18n="lang.englishLevel">English · C1</li>
+              <li class="tag" data-i18n="lang.arabicLevel">Arabic · Native</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section container" aria-labelledby="cta-title">
+        <div class="cta" data-reveal>
+          <div>
+            <h2 id="cta-title" data-i18n="cta.title">Have a project in mind?</h2>
+            <p data-i18n="cta.text">
+              I'm always happy to talk about new roles, interesting projects and full-stack
+              engineering.
+            </p>
+          </div>
+          <a class="btn" href="contact.html">
+            <span data-i18n="cta.button">Get in touch</span>
+            <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Hosam Othman</p>
+        <ul class="footer-links" role="list">
+          <li><a href="https://github.com/Hosam89" target="_blank" rel="me noopener">GitHub</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/hosam-othman-a84403266/"
+              target="_blank"
+              rel="me noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="mailto:hosamothman1@gmail.com" data-i18n="footer.email">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

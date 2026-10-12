@@ -3,43 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hosam Othman | Senior Full Stack Developer</title>
+    <title data-i18n="meta.home">Hosam Othman | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Hosam Othman is a full stack developer in Goslar, Germany, building web applications end to end with TypeScript, React, Node.js, NestJS and AWS."
+    />
+    <link rel="canonical" href="https://hosam.info/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosam.info/" />
+    <meta property="og:title" content="Hosam Othman | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full stack developer building web applications end to end with TypeScript, React, Node.js, NestJS and AWS."
+    />
+    <meta property="og:image" content="https://hosam.info/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <meta
-      name="description"
-      content="Portfolio of Hosam Othman, a senior full stack developer specializing in React, Node.js, TypeScript, and AWS."
-    />
-    <meta
-      name="keywords"
-      content="Hosam Othman, Full Stack Developer, React, Node.js, TypeScript, AWS, Portfolio"
-    />
-
-    <meta
-      property="og:title"
-      content="Hosam Othman | Senior Full Stack Developer"
-    />
-    <meta
-      property="og:description"
-      content="Senior full stack developer focused on React, Node.js, TypeScript, and AWS."
-    />
-    <meta property="og:url" content="https://hosam.info/" />
-    <meta property="og:type" content="website" />
-
-    <link rel="canonical" href="https://hosam.info/" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/main.js"></script>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Hosam Othman",
-        "jobTitle": "Senior Full Stack Developer",
+        "jobTitle": "Full Stack Developer",
         "url": "https://hosam.info/",
+        "image": "https://hosam.info/assets/img/hosam-portrait.jpg",
         "email": "mailto:hosamothman1@gmail.com",
         "telephone": "+491704641659",
         "address": {
@@ -47,6 +59,21 @@
           "addressLocality": "Goslar",
           "addressCountry": "DE"
         },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Bornemann AG"
+        },
+        "knowsAbout": [
+          "TypeScript",
+          "React",
+          "Node.js",
+          "NestJS",
+          "AWS",
+          "GraphQL",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "knowsLanguage": ["de", "en", "ar"],
         "sameAs": [
           "https://www.linkedin.com/in/hosam-othman-a84403266/",
           "https://github.com/Hosam89"
@@ -55,118 +82,285 @@
     </script>
   </head>
   <body>
-    <button class="theme-toggle" aria-label="Toggle theme">
-      <span class="theme-icon sun-icon">☀️</span>
-      <span class="theme-icon moon-icon">🌙</span>
-    </button>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-    <div class="language-switcher">
-      <button
-        class="lang-btn active"
-        data-lang="en"
-        aria-label="Switch to English"
-      >
-        <span class="flag">🇬🇧</span>
-        <span class="lang-text">EN</span>
-      </button>
-      <button class="lang-btn" data-lang="de" aria-label="Switch to German">
-        <span class="flag">🇩🇪</span>
-        <span class="lang-text">DE</span>
-      </button>
-    </div>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Hosam Othman, home"
+          data-i18n-attr="aria-label:nav.brand"
+        >
+          <span class="brand-mark" aria-hidden="true">HO</span>
+          <span class="brand-name">Hosam Othman</span>
+        </a>
 
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li>
-          <a
-            href="./index.html"
-            class="nav-link active"
-            data-en="Home"
-            data-de="Startseite"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="./about.html"
-            class="nav-link"
-            data-en="About"
-            data-de="Über mich"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="./skills.html"
-            class="nav-link"
-            data-en="Skills"
-            data-de="Fähigkeiten"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            href="./experience.html"
-            class="nav-link"
-            data-en="Experience"
-            data-de="Erfahrung"
-            >Experience</a
-          >
-        </li>
-        <li>
-          <a
-            href="./contact.html"
-            class="nav-link"
-            data-en="Contact"
-            data-de="Kontakt"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
+        <nav class="site-nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+          <ul>
+            <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
 
-    <section id="home" class="fullscreen-section active">
-      <header class="header">
-        <div class="container">
-          <div class="header-content">
-            <div class="avatar-wrapper">
-              <img
-                src="assets/RAW0615.jpg"
-                alt="Hosam Othman portrait"
-                class="avatar"
+        <div class="header-actions">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Language"
+            data-i18n-attr="aria-label:nav.language"
+          >
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle color theme"
+            data-i18n-attr="aria-label:nav.theme"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
               />
-              <span class="avatar-glow"></span>
-            </div>
-            <div class="header-text">
-              <h1 class="name">Hosam Othman</h1>
-              <p
-                class="title typewriter"
-                data-en="Software Developer"
-                data-de="Softwareentwickler"
-              >
-                Software Developer
-              </p>
-              <div class="contact-info">
-                <a href="mailto:hosamothman1@gmail.com"
-                  >hosamothman1@gmail.com</a
-                >
-                <span class="separator">|</span>
-                <a href="tel:+491704641659">01704641659</a>
-                <span class="separator">|</span>
-                <a
-                  href="https://www.linkedin.com/in/hosam-othman-a84403266/"
-                  target="_blank"
-                  >LinkedIn</a
-                >
-                <span class="separator">|</span>
-                <a href="https://github.com/Hosam89" target="_blank">GitHub</a>
-              </div>
-            </div>
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            data-menu-toggle
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Menu"
+            data-i18n-attr="aria-label:nav.menu"
+          >
+            <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="container hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.eyebrow">Full Stack Developer · Goslar, Germany</p>
+          <h1 class="hero-title" id="hero-title" data-i18n="home.title">
+            Web apps, <span class="muted">built end to end.</span>
+          </h1>
+          <p class="hero-lead" data-i18n="home.lead">
+            I'm <strong>Hosam Othman</strong>, a full stack developer working across React
+            frontends, Node.js/NestJS backends and AWS infrastructure. I care about clean
+            architecture and software that stays fast under load.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="experience.html">
+              <span data-i18n="home.ctaPrimary">View experience</span>
+              <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="contact.html" data-i18n="home.ctaSecondary"
+              >Get in touch</a
+            >
+          </div>
+          <div class="hero-stack">
+            <p class="hero-stack-label" data-i18n="home.stackLabel">Core stack</p>
+            <ul class="tags" role="list">
+              <li class="tag">TypeScript</li>
+              <li class="tag">React</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">NestJS</li>
+              <li class="tag">AWS</li>
+              <li class="tag">GraphQL</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
           </div>
         </div>
-      </header>
-    </section>
 
-    <script type="module" src="js/main.js"></script>
+        <!-- 3D viewport: js/hero-scene.js renders into this canvas -->
+        <div
+          class="hero-visual"
+          data-hero-scene
+          role="img"
+          aria-label="Animated 3D diagram of a full-stack application with frontend, API and database layers"
+          data-i18n-attr="aria-label:home.sceneLabel"
+        >
+          <canvas></canvas>
+          <span class="scene-label scene-label-tl">
+            <span class="live-dot"></span>
+            <span data-i18n="home.sceneTitle">Live render</span>
+          </span>
+          <span class="scene-label scene-label-bl">
+            three.js · WebGL
+          </span>
+          <span class="scene-label scene-label-br" data-i18n="home.sceneHint">Drag to rotate</span>
+          <span class="scene-tag" data-scene-layer="0">
+            <span class="scene-tag-name">Frontend</span>
+            <span class="scene-tag-tech">React</span>
+          </span>
+          <span class="scene-tag" data-scene-layer="1">
+            <span class="scene-tag-name">API</span>
+            <span class="scene-tag-tech">NestJS</span>
+          </span>
+          <span class="scene-tag" data-scene-layer="2">
+            <span class="scene-tag-name" data-i18n="home.layer.database">Database</span>
+            <span class="scene-tag-tech">PostgreSQL</span>
+          </span>
+        </div>
+      </section>
+
+      <section class="container" aria-label="Highlights" data-i18n-attr="aria-label:home.metricsLabel">
+        <ul class="metrics" role="list">
+          <li class="metric" data-reveal>
+            <span class="metric-value" data-i18n="home.m1.value">3,500/s</span>
+            <span class="metric-label" data-i18n="home.m1.label"
+              >Peak position updates per second processed by a NestJS backend I built</span
+            >
+          </li>
+          <li class="metric" data-reveal style="--reveal-delay: 1">
+            <span class="metric-value" data-i18n="home.m2.value"
+              >100% <span class="arrow">→</span> &lt;5%</span
+            >
+            <span class="metric-label" data-i18n="home.m2.label"
+              >CPU usage of a backend service after fixing a bottleneck found in load testing</span
+            >
+          </li>
+          <li class="metric" data-reveal style="--reveal-delay: 2">
+            <span class="metric-value">500–600 MB</span>
+            <span class="metric-label" data-i18n="home.m3.label"
+              >React frontend memory usage, down from ~1 GB</span
+            >
+          </li>
+          <li class="metric" data-reveal style="--reveal-delay: 3">
+            <span class="metric-value">10</span>
+            <span class="metric-label" data-i18n="home.m4.label"
+              >Students mentored through an intensive full-stack course</span
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section class="section container" aria-labelledby="work-title">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title" id="work-title" data-i18n="home.workTitle">
+              Selected work
+            </h2>
+            <p class="section-lead" data-i18n="home.workLead">
+              Recent projects across backend, frontend and infrastructure.
+            </p>
+          </div>
+          <a class="text-link" href="experience.html">
+            <span data-i18n="home.workLink">Full experience</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <ul class="work-grid" role="list">
+          <li class="card work-card" data-reveal>
+            <p class="work-meta">Backend</p>
+            <h3 data-i18n="home.w1.title">Location tracking backend</h3>
+            <p data-i18n="home.w1.text">
+              A NestJS monorepo on AWS that processes 2,000–3,500 position updates per second via
+              Kafka. I also migrated its data layer from MongoDB to PostgreSQL.
+            </p>
+            <ul class="tags" role="list">
+              <li class="tag">NestJS</li>
+              <li class="tag">Kafka</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">AWS</li>
+            </ul>
+          </li>
+          <li class="card work-card" data-reveal style="--reveal-delay: 1">
+            <p class="work-meta">Frontend</p>
+            <h3 data-i18n="home.w2.title">Device configuration platform</h3>
+            <p data-i18n="home.w2.text">
+              A React application for configuring connected devices live over WebSocket, with
+              Zustand for state management.
+            </p>
+            <ul class="tags" role="list">
+              <li class="tag">React</li>
+              <li class="tag">WebSocket</li>
+              <li class="tag">Zustand</li>
+            </ul>
+          </li>
+          <li class="card work-card" data-reveal>
+            <p class="work-meta"><span data-i18n="home.cat.fullstack">Full stack</span></p>
+            <h3 data-i18n="home.w3.title">Logbook management</h3>
+            <p data-i18n="home.w3.text">
+              A React and GraphQL application for tour, receipt and administrative workflows.
+            </p>
+            <ul class="tags" role="list">
+              <li class="tag">React</li>
+              <li class="tag">GraphQL</li>
+            </ul>
+          </li>
+          <li class="card work-card" data-reveal style="--reveal-delay: 1">
+            <p class="work-meta">Cloud &amp; DevOps</p>
+            <h3 data-i18n="home.w4.title">Infrastructure &amp; delivery</h3>
+            <p data-i18n="home.w4.text">
+              AWS infrastructure managed as code with Terraform, with deployments automated through
+              GitHub Actions.
+            </p>
+            <ul class="tags" role="list">
+              <li class="tag">Terraform</li>
+              <li class="tag">AWS</li>
+              <li class="tag">GitHub Actions</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="container" aria-labelledby="cta-title">
+        <div class="cta" data-reveal>
+          <div>
+            <h2 id="cta-title" data-i18n="cta.title">Have a project in mind?</h2>
+            <p data-i18n="cta.text">
+              I'm always happy to talk about new roles, interesting projects and full-stack
+              engineering.
+            </p>
+          </div>
+          <a class="btn" href="contact.html">
+            <span data-i18n="cta.button">Get in touch</span>
+            <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Hosam Othman</p>
+        <ul class="footer-links" role="list">
+          <li><a href="https://github.com/Hosam89" target="_blank" rel="me noopener">GitHub</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/hosam-othman-a84403266/"
+              target="_blank"
+              rel="me noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="mailto:hosamothman1@gmail.com" data-i18n="footer.email">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

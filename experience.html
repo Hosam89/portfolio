@@ -3,263 +3,332 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience | Hosam Othman</title>
+    <title data-i18n="meta.experience">Experience | Hosam Othman, Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Work experience and education of Hosam Othman: full-stack development with NestJS, React and AWS at Bornemann AG, and full-stack teaching at Digital Career Institute."
+    />
+    <link rel="canonical" href="https://hosam.info/experience.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosam.info/experience.html" />
+    <meta property="og:title" content="Experience | Hosam Othman, Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack development with NestJS, React and AWS at Bornemann AG, plus teaching and an engineering background."
+    />
+    <meta property="og:image" content="https://hosam.info/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <meta
-      name="description"
-      content="Employment history and achievements of Hosam Othman, senior full stack developer with experience across React, Node.js, and AWS."
-    />
-    <meta
-      name="keywords"
-      content="Hosam Othman experience, Employment history, Full Stack Developer, React, Node.js, AWS"
-    />
-
-    <meta property="og:title" content="Experience | Hosam Othman" />
-    <meta
-      property="og:description"
-      content="Career highlights and professional experience of Hosam Othman."
-    />
-    <meta property="og:url" content="https://hosam.info/experience.html" />
-    <meta property="og:type" content="website" />
-
-    <link rel="canonical" href="https://hosam.info/experience.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <button class="theme-toggle" aria-label="Toggle theme">
-      <span class="theme-icon sun-icon">☀️</span>
-      <span class="theme-icon moon-icon">🌙</span>
-    </button>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-    <div class="language-switcher">
-      <button
-        class="lang-btn active"
-        data-lang="en"
-        aria-label="Switch to English"
-      >
-        <span class="flag">🇬🇧</span>
-        <span class="lang-text">EN</span>
-      </button>
-      <button class="lang-btn" data-lang="de" aria-label="Switch to German">
-        <span class="flag">🇩🇪</span>
-        <span class="lang-text">DE</span>
-      </button>
-    </div>
-
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li>
-          <a
-            href="./index.html"
-            class="nav-link"
-            data-en="Home"
-            data-de="Startseite"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="./about.html"
-            class="nav-link"
-            data-en="About"
-            data-de="Über mich"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="./skills.html"
-            class="nav-link"
-            data-en="Skills"
-            data-de="Fähigkeiten"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            href="./experience.html"
-            class="nav-link active"
-            data-en="Experience"
-            data-de="Erfahrung"
-            >Experience</a
-          >
-        </li>
-        <li>
-          <a
-            href="./contact.html"
-            class="nav-link"
-            data-en="Contact"
-            data-de="Kontakt"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <section id="experience" class="fullscreen-section active">
-      <div class="container section-container">
-        <h2
-          class="section-title"
-          data-en="Employment History"
-          data-de="Berufserfahrung"
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Hosam Othman, home"
+          data-i18n-attr="aria-label:nav.brand"
         >
-          Employment History
-        </h2>
-        <div class="experience-grid">
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Fullstack Developer at Bornemann AG, Goslar"
-                data-de="Fullstack-Entwickler bei Bornemann AG, Goslar"
-              >
-                Fullstack Developer at Bornemann AG, Goslar
-              </h3>
-              <span
-                class="date"
-                data-en="June 2023 — Present"
-                data-de="Juni 2023 — Heute"
-                >June 2023 — Present</span
-              >
-            </div>
-            <p class="company">Goslar, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Architected and implemented a NestJS monorepo REST API deployed on AWS for seamless IoT mesh communication."
-                data-de="Architektur und Implementierung einer NestJS-Monorepo-REST-API auf AWS für nahtlose IoT-Mesh-Kommunikation."
-              >
-                Architected and implemented a
-                <strong>NestJS monorepo REST API</strong> deployed on
-                <strong>AWS</strong> for seamless IoT mesh communication.
-              </li>
-              <li
-                data-en="Developed a real-time IoT configuration platform using React, WebSocket, and Zustand, enhancing operational efficiency."
-                data-de="Entwicklung einer Echtzeit-IoT-Konfigurationsplattform mit React, WebSocket und Zustand zur Steigerung der Betriebseffizienz."
-              >
-                Developed a
-                <strong>real-time IoT configuration platform</strong> using
-                React, WebSocket, and Zustand, enhancing operational efficiency.
-              </li>
-              <li
-                data-en="Built a modular, scalable UI system following component-driven design and accessibility best practices (WCAG)."
-                data-de="Entwicklung eines modularen, skalierbaren UI-Systems nach komponentengetriebenem Design und Barrierefreiheits-Best-Practices (WCAG)."
-              >
-                Built a modular, scalable UI system following component-driven
-                design and accessibility best practices (WCAG).
-              </li>
-              <li
-                data-en="Delivered a robust logbook management system using React and GraphQL, streamlining administrative workflows."
-                data-de="Bereitstellung eines robusten Logbuch-Verwaltungssystems mit React und GraphQL zur Optimierung administrativer Arbeitsabläufe."
-              >
-                Delivered a robust
-                <strong>logbook management system</strong> using React and
-                GraphQL, streamlining administrative workflows.
-              </li>
-              <li
-                data-en="Led redesign of the central authentication portal using PrimeFaces and custom CSS for improved usability."
-                data-de="Leitung der Neugestaltung des zentralen Authentifizierungsportals mit PrimeFaces und benutzerdefiniertem CSS für verbesserte Benutzerfreundlichkeit."
-              >
-                Led redesign of the central authentication portal using
-                <strong>PrimeFaces</strong> and custom CSS for improved
-                usability.
-              </li>
-            </ul>
-          </div>
+          <span class="brand-mark" aria-hidden="true">HO</span>
+          <span class="brand-name">Hosam Othman</span>
+        </a>
 
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Class Tutor for Full-Stack Development at Digital Career Institute, Münster"
-                data-de="Kursleiter für Full-Stack-Entwicklung am Digital Career Institute, Münster"
-              >
-                Class Tutor for Full-Stack Development at Digital Career
-                Institute, Münster
-              </h3>
-              <span
-                class="date"
-                data-en="June 2022 — June 2023"
-                data-de="Juni 2022 — Juni 2023"
-                >June 2022 — June 2023</span
-              >
-            </div>
-            <p class="company">Münster, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Mentored a cohort of 10 students during an intensive full-stack course, improving completion rates."
-                data-de="Betreute eine Kohorte von 10 Studierenden während eines intensiven Full-Stack-Kurses und verbesserte die Abschlussquoten."
-              >
-                Mentored a cohort of <strong>10 students</strong> during an
-                intensive full-stack course, improving completion rates.
-              </li>
-              <li
-                data-en="Delivered advanced workshops on React, Node.js, and REST API development, improving student proficiency and project quality."
-                data-de="Durchführung fortgeschrittener Workshops zu React, Node.js und REST-API-Entwicklung zur Verbesserung der Studierenden-Kompetenz und Projektqualität."
-              >
-                Delivered advanced workshops on
-                <strong>React, Node.js, and REST API development</strong>,
-                improving student proficiency and project quality.
-              </li>
-              <li
-                data-en="Implemented a peer programming framework that increased collaboration and coding confidence."
-                data-de="Implementierung eines Peer-Programming-Frameworks zur Steigerung der Zusammenarbeit und des Programmiervertrauens."
-              >
-                Implemented a <strong>peer programming framework</strong> that
-                increased collaboration and coding confidence.
-              </li>
-              <li
-                data-en="Designed hands-on coding challenges and tutorials rated 'extremely helpful' by over 90% of participants."
-                data-de="Entwicklung praktischer Programmieraufgaben und Tutorials, die von über 90% der Teilnehmenden als 'äußerst hilfreich' bewertet wurden."
-              >
-                Designed hands-on coding challenges and tutorials rated
-                <strong>"extremely helpful" by over 90%</strong> of
-                participants.
-              </li>
-            </ul>
-          </div>
+        <nav class="site-nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="experience.html" aria-current="page" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
 
-          <div class="timeline-item">
-            <div class="timeline-header">
-              <h3
-                data-en="Plant and Machine Operator at Hengst Filtration, Münster"
-                data-de="Anlagen- und Maschinenbediener bei Hengst Filtration, Münster"
-              >
-                Plant and Machine Operator at Hengst Filtration, Münster
-              </h3>
-              <span
-                class="date"
-                data-en="July 2016 — August 2018"
-                data-de="Juli 2016 — August 2018"
-                >July 2016 — August 2018</span
-              >
-            </div>
-            <p class="company">Münster, Germany</p>
-            <ul class="responsibilities">
-              <li
-                data-en="Operated, maintained, and troubleshot industrial machinery to ensure uninterrupted production."
-                data-de="Bedienung, Wartung und Fehlerbehebung von Industriemaschinen zur Sicherstellung einer unterbrechungsfreien Produktion."
-              >
-                Operated, maintained, and troubleshot
-                <strong>industrial machinery</strong> to ensure uninterrupted
-                production.
-              </li>
-              <li
-                data-en="Collected production data to inform continuous improvement and reduce equipment downtime."
-                data-de="Erfassung von Produktionsdaten zur Information kontinuierlicher Verbesserungen und Reduzierung von Anlagenausfallzeiten."
-              >
-                Collected production data to inform
-                <strong>continuous improvement</strong> and reduce equipment
-                downtime.
-              </li>
-            </ul>
+        <div class="header-actions">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Language"
+            data-i18n-attr="aria-label:nav.language"
+          >
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
           </div>
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle color theme"
+            data-i18n-attr="aria-label:nav.theme"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            data-menu-toggle
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Menu"
+            data-i18n-attr="aria-label:nav.menu"
+          >
+            <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <script type="module" src="js/main.js"></script>
+    <main id="main">
+      <section class="container page-hero">
+        <p class="eyebrow" data-i18n="exp.eyebrow">Experience</p>
+        <h1 class="page-title" data-i18n="exp.title">Experience &amp; education</h1>
+        <p class="page-lead" data-i18n="exp.lead">
+          From engineering and industrial production to full-stack development.
+        </p>
+      </section>
+
+      <section class="container" aria-labelledby="work-history-title">
+        <div class="section-head">
+          <h2 class="section-title" id="work-history-title" data-i18n="exp.workTitle">
+            Work experience
+          </h2>
+        </div>
+
+        <ol class="timeline" role="list">
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.bornemann.date">Jun 2023 — Present</span>
+              <span data-i18n="common.location">Goslar, Germany</span>
+              <span class="role-current" data-i18n="exp.current">Current</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="common.role">Full Stack Developer</h3>
+              <p class="role-company">Bornemann AG</p>
+              <ul class="role-points" role="list">
+                <li data-i18n="exp.bornemann.1">
+                  Built the backend of a real-time location system (RTLS) as a
+                  <strong>NestJS monorepo on AWS</strong>, processing
+                  <strong>2,000–3,500 position updates per second</strong> via Kafka and
+                  communicating with IoT mesh networks.
+                </li>
+                <li data-i18n="exp.bornemann.2">
+                  Migrated the data layer from MongoDB to <strong>PostgreSQL</strong> to match the
+                  highly relational domain data.
+                </li>
+                <li data-i18n="exp.bornemann.3">
+                  Found a bottleneck in the collision-detection service during load testing and
+                  reduced its CPU usage from <strong>100% to under 5%</strong> before production
+                  release.
+                </li>
+                <li data-i18n="exp.bornemann.4">
+                  Reduced memory usage of the React frontend from
+                  <strong>~1 GB to 500–600 MB</strong>.
+                </li>
+                <li data-i18n="exp.bornemann.5">
+                  Developed a real-time IoT device configuration platform with React, WebSocket
+                  and Zustand.
+                </li>
+                <li data-i18n="exp.bornemann.6">
+                  Manage AWS infrastructure as code with <strong>Terraform</strong> and automated
+                  deployments with GitHub Actions.
+                </li>
+                <li data-i18n="exp.bornemann.7">
+                  Built a logbook management system with React and GraphQL for tour, receipt and
+                  administrative workflows.
+                </li>
+              </ul>
+              <ul class="tags" role="list">
+                <li class="tag">TypeScript</li>
+                <li class="tag">NestJS</li>
+                <li class="tag">React</li>
+                <li class="tag">Kafka</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">GraphQL</li>
+                <li class="tag">WebSocket</li>
+                <li class="tag">AWS</li>
+                <li class="tag">Terraform</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.dci.date">Jun 2022 — Jun 2023</span>
+              <span data-i18n="common.muenster">Münster, Germany</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="exp.dci.title">
+                Class Tutor, Full-Stack Development
+              </h3>
+              <p class="role-company">Digital Career Institute</p>
+              <ul class="role-points" role="list">
+                <li data-i18n="exp.dci.1">
+                  Mentored a cohort of <strong>10 students</strong> during an intensive full-stack
+                  course, improving completion rates.
+                </li>
+                <li data-i18n="exp.dci.2">
+                  Taught workshops on <strong>React, Node.js and REST API development</strong>.
+                </li>
+                <li data-i18n="exp.dci.3">
+                  Introduced regular pair-programming sessions to strengthen collaboration and
+                  coding confidence.
+                </li>
+              </ul>
+              <ul class="tags" role="list">
+                <li class="tag">React</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">REST APIs</li>
+                <li class="tag">Mentoring</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.hengst.date">Jul 2016 — Aug 2018</span>
+              <span data-i18n="common.muenster">Münster, Germany</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="exp.hengst.title">Plant and Machine Operator</h3>
+              <p class="role-company">Hengst Filtration</p>
+              <ul class="role-points" role="list">
+                <li data-i18n="exp.hengst.1">
+                  Operated, maintained and troubleshot industrial production machinery to keep
+                  production running.
+                </li>
+                <li data-i18n="exp.hengst.2">
+                  Collected production data used to reduce equipment downtime.
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section container" aria-labelledby="education-title">
+        <div class="section-head">
+          <h2 class="section-title" id="education-title" data-i18n="exp.educationTitle">
+            Education
+          </h2>
+        </div>
+
+        <ol class="timeline" role="list">
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.dci.date">Jun 2022 — Jun 2023</span>
+              <span data-i18n="common.muenster">Münster, Germany</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="exp.edu.dci.title">
+                Full Stack Developer Training
+              </h3>
+              <p class="role-company">Digital Career Institute</p>
+              <ul class="role-points" role="list">
+                <li data-i18n="exp.edu.dci.1">
+                  Frontend (React, HTML/CSS) and backend (Node.js, Express, MongoDB) development.
+                </li>
+                <li data-i18n="exp.edu.dci.2">
+                  Team-based projects with Agile workflows, Git and deployment pipelines, ending in
+                  a full-stack capstone application.
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.ude.date">Sep 2018 — Jun 2021</span>
+              <span data-i18n="exp.ude.location">Duisburg, Germany</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="exp.ude.title">B.Sc. Mechanical Engineering</h3>
+              <p class="role-company" data-i18n="exp.ude.school">University of Duisburg-Essen</p>
+              <p class="role-text" data-i18n="exp.ude.text">
+                Capstone: automation of a product line using integrated control systems.
+              </p>
+              <p class="role-note" data-i18n="exp.ude.note">
+                Studies interrupted for personal reasons.
+              </p>
+            </div>
+          </li>
+
+          <li class="role" data-reveal>
+            <div class="role-meta">
+              <span class="role-date" data-i18n="exp.baath.date">Aug 2010 — Jul 2016</span>
+              <span data-i18n="exp.baath.location">Homs, Syria</span>
+            </div>
+            <div>
+              <h3 class="role-title" data-i18n="exp.baath.title">
+                B.Sc. Mechatronics Engineering
+              </h3>
+              <p class="role-company" data-i18n="exp.baath.school">Al-Baath University</p>
+              <p class="role-text" data-i18n="exp.baath.text">
+                Multidisciplinary engineering: mechanical systems, electronics, control and
+                software.
+              </p>
+              <p class="role-note" data-i18n="exp.baath.note">
+                Studies interrupted due to armed conflict.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Hosam Othman</p>
+        <ul class="footer-links" role="list">
+          <li><a href="https://github.com/Hosam89" target="_blank" rel="me noopener">GitHub</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/hosam-othman-a84403266/"
+              target="_blank"
+              rel="me noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="mailto:hosamothman1@gmail.com" data-i18n="footer.email">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

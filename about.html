@@ -3,164 +3,268 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Hosam Othman | Senior Full Stack Developer</title>
+    <title data-i18n="meta.about">About Hosam Othman | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="About Hosam Othman: full stack developer at Bornemann AG in Goslar, Germany, with a background in mechatronics and mechanical engineering."
+    />
+    <link rel="canonical" href="https://hosam.info/about.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hosam.info/about.html" />
+    <meta property="og:title" content="About Hosam Othman | Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full stack developer building web applications end to end, with roots in engineering."
+    />
+    <meta property="og:image" content="https://hosam.info/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
-    <meta
-      name="description"
-      content="Learn about Hosam Othman, a senior full stack developer with experience in React, Node.js, TypeScript, AWS, and scalable web applications."
-    />
-    <meta
-      name="keywords"
-      content="About Hosam Othman, Senior Full Stack Developer, React, Node.js, TypeScript, AWS"
-    />
-
-    <meta property="og:title" content="About Hosam Othman" />
-    <meta
-      property="og:description"
-      content="Professional background and profile of Hosam Othman, senior full stack developer."
-    />
-    <meta property="og:url" content="https://hosam.info/about.html" />
-    <meta property="og:type" content="website" />
-
-    <link rel="canonical" href="https://hosam.info/about.html" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <button class="theme-toggle" aria-label="Toggle theme">
-      <span class="theme-icon sun-icon">☀️</span>
-      <span class="theme-icon moon-icon">🌙</span>
-    </button>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
-    <div class="language-switcher">
-      <button
-        class="lang-btn active"
-        data-lang="en"
-        aria-label="Switch to English"
-      >
-        <span class="flag">🇬🇧</span>
-        <span class="lang-text">EN</span>
-      </button>
-      <button class="lang-btn" data-lang="de" aria-label="Switch to German">
-        <span class="flag">🇩🇪</span>
-        <span class="lang-text">DE</span>
-      </button>
-    </div>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Hosam Othman, home"
+          data-i18n-attr="aria-label:nav.brand"
+        >
+          <span class="brand-mark" aria-hidden="true">HO</span>
+          <span class="brand-name">Hosam Othman</span>
+        </a>
 
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li>
-          <a
-            href="./index.html"
-            class="nav-link"
-            data-en="Home"
-            data-de="Startseite"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a
-            href="./about.html"
-            class="nav-link active"
-            data-en="About"
-            data-de="Über mich"
-            >About</a
-          >
-        </li>
-        <li>
-          <a
-            href="./skills.html"
-            class="nav-link"
-            data-en="Skills"
-            data-de="Fähigkeiten"
-            >Skills</a
-          >
-        </li>
-        <li>
-          <a
-            href="./experience.html"
-            class="nav-link"
-            data-en="Experience"
-            data-de="Erfahrung"
-            >Experience</a
-          >
-        </li>
-        <li>
-          <a
-            href="./contact.html"
-            class="nav-link"
-            data-en="Contact"
-            data-de="Kontakt"
-            >Contact</a
-          >
-        </li>
-      </ul>
-    </nav>
+        <nav class="site-nav" id="site-nav" aria-label="Main" data-i18n-attr="aria-label:nav.label">
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" aria-current="page" data-i18n="nav.about">About</a></li>
+            <li><a href="experience.html" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
 
-    <section id="about" class="fullscreen-section active">
-      <div class="container section-container">
-        <h2 class="section-title" data-en="About Me" data-de="Über mich">
-          About Me
-        </h2>
-        <div class="about-content">
-          <p
-            class="about-text"
-            data-en="Innovative and performance-driven Senior Full Stack Developer with 5+ years of experience designing, developing, and deploying high-scale web applications and cloud-native systems. Proven expertise in JavaScript, TypeScript, React, Node.js, and NestJS, with strong command of AWS infrastructure, REST/GraphQL APIs, and real-time data handling. Adept at building component-driven frontends, architecting backend services, and leading cross-functional teams to deliver robust software solutions."
-            data-de="Innovativer und leistungsorientierter Senior Full Stack Entwickler mit 5+ Jahren Erfahrung in der Konzeption, Entwicklung und Bereitstellung hochskalierbarer Webanwendungen und Cloud-nativer Systeme. Nachgewiesene Expertise in JavaScript, TypeScript, React, Node.js und NestJS, mit fundierter Kenntnis der AWS-Infrastruktur, REST/GraphQL-APIs und Echtzeit-Datenverarbeitung. Kompetent im Erstellen komponentengetriebener Frontends, der Architektur von Backend-Services und der Leitung interdisziplinärer Teams zur Bereitstellung robuster Softwarelösungen."
+        <div class="header-actions">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Language"
+            data-i18n-attr="aria-label:nav.language"
           >
-            Innovative and performance-driven
-            <strong>Senior Full Stack Developer</strong>
-            with 4+ years of experience designing, developing, and deploying
-            high-scale web applications and cloud-native systems. Proven
-            expertise in
-            <strong>JavaScript, TypeScript, React, Node.js, and NestJS</strong>,
-            with strong command of
-            <strong
-              >AWS infrastructure, REST/GraphQL APIs, and real-time data
-              handling</strong
-            >. Adept at building component-driven frontends, architecting
-            backend services, and leading cross-functional teams to deliver
-            robust software solutions.
-          </p>
-
-          <div class="info-cards">
-            <div class="info-card">
-              <h3 data-en="Details" data-de="Details">Details</h3>
-              <p>📍 Goslar, Germany</p>
-              <p>📞 01704641659</p>
-              <p>
-                📧
-                <a href="mailto:hosamothman1@gmail.com"
-                  >hosamothman1@gmail.com</a
-                >
-              </p>
-            </div>
-            <div class="info-card">
-              <h3 data-en="Languages" data-de="Sprachen">Languages</h3>
-              <ul class="languages">
-                <li>
-                  <span>German</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-                <li>
-                  <span>English</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-                <li>
-                  <span>Arabic</span>
-                  <div class="lang-bar"><span class="fill full"></span></div>
-                </li>
-              </ul>
-            </div>
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
           </div>
+          <button
+            type="button"
+            class="icon-btn theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle color theme"
+            data-i18n-attr="aria-label:nav.theme"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="icon-btn menu-toggle"
+            data-menu-toggle
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Menu"
+            data-i18n-attr="aria-label:nav.menu"
+          >
+            <svg class="icon icon-menu" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <svg class="icon icon-close" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <script type="module" src="js/main.js"></script>
+    <main id="main">
+      <section class="container page-hero">
+        <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+        <h1 class="page-title" data-i18n="about.title">From the factory floor to the cloud.</h1>
+        <p class="page-lead" data-i18n="about.lead">
+          Full stack developer building web applications end to end, from database to
+          interface.
+        </p>
+      </section>
+
+      <section class="container" aria-labelledby="profile-title">
+        <div class="about-grid">
+          <figure class="portrait">
+            <picture>
+              <source srcset="assets/img/hosam-portrait.webp" type="image/webp" />
+              <img
+                src="assets/img/hosam-portrait.jpg"
+                alt="Portrait of Hosam Othman"
+                data-i18n-attr="alt:about.photoAlt"
+                width="800"
+                height="1000"
+                fetchpriority="high"
+              />
+            </picture>
+            <figcaption>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span data-i18n="common.location">Goslar, Germany</span>
+            </figcaption>
+          </figure>
+
+          <div>
+            <div class="prose">
+              <h2 id="profile-title" data-i18n="about.profileTitle">Profile</h2>
+              <p data-i18n="about.p1">
+                I'm a full stack developer at <strong>Bornemann AG</strong> in Goslar, working
+                across the whole stack: NestJS services and data layers on AWS, React frontends,
+                and the infrastructure that runs them. Recent projects include a high-throughput
+                backend on Kafka, a React/WebSocket platform for configuring devices, and a
+                GraphQL-based logbook system.
+              </p>
+              <p data-i18n="about.p2">
+                Before that, I taught full-stack development at the
+                <strong>Digital Career Institute</strong>, mentoring a cohort of students through
+                React, Node.js and REST API development.
+              </p>
+              <p data-i18n="about.p3">
+                My path into software started in engineering. I studied mechatronics and
+                mechanical engineering, and worked as a plant and machine operator at Hengst
+                Filtration, keeping production running. That engineering background still shapes
+                how I build software: systematically, and with the whole system in view.
+              </p>
+
+              <h2 data-i18n="about.focusTitle">What I focus on</h2>
+              <p data-i18n="about.focus">
+                Clean architecture, maintainable code and applications that stay fast under load.
+                My core stack is TypeScript, React, Node.js, NestJS, AWS and REST/GraphQL.
+              </p>
+            </div>
+
+            <dl class="facts" data-reveal>
+              <div class="fact">
+                <dt data-i18n="about.fact.role">Role</dt>
+                <dd data-i18n="common.role">Full Stack Developer</dd>
+              </div>
+              <div class="fact">
+                <dt data-i18n="about.fact.company">Company</dt>
+                <dd>Bornemann AG</dd>
+              </div>
+              <div class="fact">
+                <dt data-i18n="about.fact.location">Location</dt>
+                <dd data-i18n="common.location">Goslar, Germany</dd>
+              </div>
+              <div class="fact">
+                <dt data-i18n="about.fact.focus">Focus</dt>
+                <dd data-i18n="about.fact.focusValue">Full-stack web applications</dd>
+              </div>
+            </dl>
+
+            <div class="prose" style="margin-top: 48px">
+              <h2 id="languages-title" data-i18n="about.languagesTitle">Languages</h2>
+            </div>
+            <ul class="lang-list" role="list" aria-labelledby="languages-title" data-reveal>
+              <li class="lang-item">
+                <span class="name" data-i18n="lang.german">German</span>
+                <span class="lang-meter" aria-hidden="true">
+                  <span class="on"></span><span class="on"></span><span class="on"></span
+                  ><span class="on"></span><span class="on"></span><span></span>
+                </span>
+                <span class="level">C1</span>
+              </li>
+              <li class="lang-item">
+                <span class="name" data-i18n="lang.english">English</span>
+                <span class="lang-meter" aria-hidden="true">
+                  <span class="on"></span><span class="on"></span><span class="on"></span
+                  ><span class="on"></span><span class="on"></span><span></span>
+                </span>
+                <span class="level">C1</span>
+              </li>
+              <li class="lang-item">
+                <span class="name" data-i18n="lang.arabic">Arabic</span>
+                <span class="lang-meter" aria-hidden="true">
+                  <span class="on"></span><span class="on"></span><span class="on"></span
+                  ><span class="on"></span><span class="on"></span><span class="on"></span>
+                </span>
+                <span class="level" data-i18n="lang.native">Native</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" aria-labelledby="cta-title">
+        <div class="cta" data-reveal>
+          <div>
+            <h2 id="cta-title" data-i18n="cta.title">Have a project in mind?</h2>
+            <p data-i18n="cta.text">
+              I'm always happy to talk about new roles, interesting projects and full-stack
+              engineering.
+            </p>
+          </div>
+          <a class="btn" href="contact.html">
+            <span data-i18n="cta.button">Get in touch</span>
+            <svg class="icon icon-arrow" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> Hosam Othman</p>
+        <ul class="footer-links" role="list">
+          <li><a href="https://github.com/Hosam89" target="_blank" rel="me noopener">GitHub</a></li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/hosam-othman-a84403266/"
+              target="_blank"
+              rel="me noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="mailto:hosamothman1@gmail.com" data-i18n="footer.email">Email</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
